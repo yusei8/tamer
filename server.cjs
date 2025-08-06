@@ -10,17 +10,10 @@ const os = require('os');
 const app = express();
 const PORT = process.env.PORT || 4000;
 
-// Sert les fichiers du dossier dist
-app.use(express.static(path.join(__dirname, 'dist')));
-
-
-app.listen(PORT, () => {
-  console.log(`✅ Serveur lancé sur http://localhost:${PORT}`);
-});
-
 // Middlewares
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.join(__dirname, 'dist')));
 app.use('/rachef-uploads', express.static(path.join(__dirname, 'public/rachef-uploads')));
 
 // Chemins vers les fichiers JSON
@@ -29,7 +22,7 @@ const datapPath = path.join(__dirname, 'src', 'datap.json');
 const adminPath = path.join(__dirname, 'admin.json');
 const messagesPath = path.join(__dirname, 'msg.json');
 
-// Fonction de chiffrement simple (même que authStore)
+// Fonction de chiffrement simple
 const encrypt = (text) => {
   return Buffer.from(text.split('').map(char => 
     String.fromCharCode(char.charCodeAt(0) + 3)
@@ -64,59 +57,22 @@ const upload = multer({
 });
 
 // Upload d'image
-app.post('/api/upload', (req, res) => {
-  console.log('=== DÉBUT UPLOAD ===');
-  console.log('Headers:', req.headers);
-  console.log('Content-Type:', req.get('Content-Type'));
+app.post('/api/upload', upload.single('file'), (req, res) => {
+  if (!req.file) {
+    return res.status(400).json({ 
+      error: 'Aucun fichier reçu',
+      details: 'Le champ "file" est requis'
+    });
+  }
+
+  const filePath = `/rachef-uploads/${req.file.filename}`;
   
-  upload.single('file')(req, res, (err) => {
-    if (err) {
-      console.error('Erreur Multer:', err);
-      if (err instanceof multer.MulterError) {
-        if (err.code === 'LIMIT_FILE_SIZE') {
-          return res.status(400).json({ 
-            error: 'Fichier trop volumineux', 
-            details: 'Taille maximum autorisée: 10MB' 
-          });
-        }
-        return res.status(400).json({ 
-          error: 'Erreur de fichier', 
-          details: err.message 
-        });
-      }
-      return res.status(500).json({ 
-        error: 'Erreur serveur lors de l\'upload', 
-        details: err.message 
-      });
-    }
-
-    if (!req.file) {
-      console.log('Aucun fichier reçu dans req.file');
-      return res.status(400).json({ 
-        error: 'Aucun fichier reçu',
-        details: 'Le champ "file" est requis'
-      });
-    }
-
-    console.log('Fichier reçu:', {
-      originalname: req.file.originalname,
-      mimetype: req.file.mimetype,
-      size: req.file.size,
-      filename: req.file.filename
-    });
-
-    const filePath = `/rachef-uploads/${req.file.filename}`;
-    
-    res.json({ 
-      success: true, 
-      filename: req.file.filename,
-      filePath: filePath,
-      originalName: req.file.originalname,
-      size: req.file.size
-    });
-    
-    console.log('Upload réussi:', filePath);
-    console.log('=== FIN UPLOAD ===');
+  res.json({ 
+    success: true, 
+    filename: req.file.filename,
+    filePath: filePath,
+    originalName: req.file.originalname,
+    size: req.file.size
   });
 });
 
@@ -164,7 +120,6 @@ app.post('/api/save-datap', (req, res) => {
 app.get('/api/load-admins', (req, res) => {
   fs.readFile(adminPath, 'utf8', (err, data) => {
     if (err) {
-      // Si le fichier n'existe pas, retourner un objet vide
       if (err.code === 'ENOENT') {
         return res.json({ admins: [] });
       }
@@ -194,7 +149,6 @@ app.post('/api/save-message', (req, res) => {
     return res.status(400).json({ error: 'Champs obligatoires manquants' });
   }
 
-  // Créer le message avec ID unique et timestamp
   const newMessage = {
     id: Date.now().toString(),
     name: encrypt(name),
@@ -206,7 +160,6 @@ app.post('/api/save-message', (req, res) => {
     read: false
   };
 
-  // Lire les messages existants
   fs.readFile(messagesPath, 'utf8', (err, data) => {
     let messages = [];
     
@@ -223,10 +176,8 @@ app.post('/api/save-message', (req, res) => {
       }
     }
 
-    // Ajouter le nouveau message
-    messages.unshift(newMessage); // Nouveau message en premier
+    messages.unshift(newMessage);
 
-    // Sauvegarder
     const dataToSave = { messages };
     fs.writeFile(messagesPath, JSON.stringify(dataToSave, null, 2), 'utf8', (err) => {
       if (err) return res.status(500).json({ error: 'Erreur écriture msg.json' });
@@ -249,7 +200,6 @@ app.get('/api/load-messages', (req, res) => {
       const parsedData = JSON.parse(data);
       const messages = parsedData.messages || [];
       
-      // Déchiffrer les messages pour l'admin
       const decryptedMessages = messages.map(msg => ({
         ...msg,
         name: decrypt(msg.name),
@@ -319,8 +269,6 @@ app.delete('/api/delete-message/:id', (req, res) => {
 
 // Middleware de vérification d'authentification pour File Manager
 const requireAdminAuth = (req, res, next) => {
-  // Pour la démo, nous faisons confiance au frontend pour les vérifications
-  // En production, vérifier le token JWT ou la session
   next();
 };
 
@@ -343,7 +291,6 @@ const getFolderSize = (folderPath) => {
         }
       }
     } catch (error) {
-      // Ignorer les erreurs d'accès
     }
   };
   
@@ -354,33 +301,27 @@ const getFolderSize = (folderPath) => {
 // Obtenir les informations système
 app.get('/api/filemanager/system-info', requireAdminAuth, (req, res) => {
   try {
-    // Informations RAM
     const totalMemory = os.totalmem();
     const freeMemory = os.freemem();
     const usedMemory = totalMemory - freeMemory;
     
-    // Informations CPU
     const cpus = os.cpus();
     const platform = os.platform();
     const arch = os.arch();
     const hostname = os.hostname();
     const uptime = os.uptime();
     
-    // Informations disque (pour le répertoire courant)
     const currentPath = path.resolve('./');
     let diskInfo = null;
     
     try {
       if (platform === 'win32') {
-        // Windows - utiliser statvfs si disponible, sinon estimation
-        const stats = fs.statSync(currentPath);
         diskInfo = {
-          total: 500 * 1024 * 1024 * 1024, // 500GB estimation
-          free: 200 * 1024 * 1024 * 1024,  // 200GB estimation
-          used: 300 * 1024 * 1024 * 1024   // 300GB estimation
+          total: 500 * 1024 * 1024 * 1024,
+          free: 200 * 1024 * 1024 * 1024,
+          used: 300 * 1024 * 1024 * 1024
         };
       } else {
-        // Linux/Mac - utiliser statvfs
         const { execSync } = require('child_process');
         const output = execSync(`df -B1 "${currentPath}"`, { encoding: 'utf8' });
         const lines = output.split('\n');
@@ -393,15 +334,13 @@ app.get('/api/filemanager/system-info', requireAdminAuth, (req, res) => {
         };
       }
     } catch (error) {
-      // Fallback avec estimation
       diskInfo = {
-        total: 500 * 1024 * 1024 * 1024, // 500GB
-        free: 200 * 1024 * 1024 * 1024,  // 200GB libre
-        used: 300 * 1024 * 1024 * 1024   // 300GB utilisé
+        total: 500 * 1024 * 1024 * 1024,
+        free: 200 * 1024 * 1024 * 1024,
+        used: 300 * 1024 * 1024 * 1024
       };
     }
     
-    // Taille du projet actuel
     const projectSize = getFolderSize(currentPath);
     
     res.json({
@@ -448,7 +387,6 @@ app.get('/api/filemanager/explore', requireAdminAuth, (req, res) => {
   const targetPath = req.query.path || './';
   const fullPath = path.resolve(targetPath);
   
-  // Sécurité : empêcher d'accéder à des répertoires non autorisés
   const rootPath = path.resolve('./');
   if (!fullPath.startsWith(rootPath)) {
     return res.status(403).json({ error: 'Accès non autorisé à ce répertoire' });
@@ -473,7 +411,6 @@ app.get('/api/filemanager/explore', requireAdminAuth, (req, res) => {
       };
     });
     
-    // Trier : dossiers d'abord, puis fichiers par nom
     items.sort((a, b) => {
       if (a.type !== b.type) {
         return a.type === 'directory' ? -1 : 1;
@@ -515,7 +452,6 @@ app.get('/api/filemanager/read-file', requireAdminAuth, (req, res) => {
       return res.status(400).json({ error: 'Pas un fichier' });
     }
     
-    // Vérifier si c'est un fichier texte
     const ext = path.extname(fullPath).toLowerCase();
     const textExtensions = ['.txt', '.js', '.ts', '.jsx', '.tsx', '.json', '.css', '.html', '.md', '.env', '.cfg', '.config', '.xml', '.yml', '.yaml'];
     
@@ -550,7 +486,6 @@ app.post('/api/filemanager/save-file', requireAdminAuth, (req, res) => {
   }
   
   try {
-    // Créer le répertoire parent si nécessaire
     const dirPath = path.dirname(fullPath);
     if (!fs.existsSync(dirPath)) {
       fs.mkdirSync(dirPath, { recursive: true });
@@ -634,7 +569,6 @@ const fileManagerUpload = multer({
       const uploadPath = req.body.path || './';
       const fullPath = path.resolve(uploadPath);
       
-      // Créer le répertoire si nécessaire
       if (!fs.existsSync(fullPath)) {
         fs.mkdirSync(fullPath, { recursive: true });
       }
@@ -690,7 +624,6 @@ app.get('/api/filemanager/download', requireAdminAuth, (req, res) => {
     
     const stats = fs.statSync(fullPath);
     if (stats.isDirectory()) {
-      // Créer un zip du dossier
       const archive = archiver('zip', { zlib: { level: 9 } });
       
       res.attachment(`${path.basename(fullPath)}.zip`);
@@ -712,7 +645,6 @@ app.post('/api/filemanager/backup', requireAdminAuth, (req, res) => {
     const backupName = `backup-${new Date().toISOString().replace(/[:.]/g, '-')}.zip`;
     const backupPath = path.join(__dirname, 'backups');
     
-    // Créer le dossier de backup
     if (!fs.existsSync(backupPath)) {
       fs.mkdirSync(backupPath, { recursive: true });
     }
@@ -722,7 +654,6 @@ app.post('/api/filemanager/backup', requireAdminAuth, (req, res) => {
     
     archive.pipe(output);
     
-    // Ajouter tous les fichiers du projet, en excluant certains dossiers
     archive.glob('**/*', {
       cwd: __dirname,
       ignore: [
@@ -786,7 +717,6 @@ app.post('/api/filemanager/extract-zip', requireAdminAuth, (req, res) => {
             return;
           }
           
-          // Créer le dossier parent si nécessaire
           const dirPath = path.dirname(outputPath);
           if (!fs.existsSync(dirPath)) {
             fs.mkdirSync(dirPath, { recursive: true });
@@ -813,14 +743,12 @@ app.post('/api/filemanager/extract-zip', requireAdminAuth, (req, res) => {
   }
 });
 
-
 // Route catch-all pour SPA React
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
+// Single listen call at the end
 app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Serveur backend lancé sur http://0.0.0.0:${PORT}`);
-}); 
-
-
+  console.log(`✅ Serveur lancé sur http://0.0.0.0:${PORT}`);
+});
