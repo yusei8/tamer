@@ -55,10 +55,10 @@
   },
   "hero": {
     "backgroundImage": "/rachef-uploads/1754383134026-3c4f7367-ac55-4dd5-bd35-16e9d353abe5.png",
-    "title2": "Académie de Transport & Logistique",
-    "titleLine1": "Centre d'excellence en ",
-    "titleLine2": "Formation professionnelle ",
-    "description": "ACTL propose une gamme complète de formations professionnelles dans divers secteurs : automobile, logistique, commerce, finances et ressources humaines, pour préparer les experts de demain.",
+    "title2": "Académie de Transport & Logistique ",
+    "titleLine1": "Centre d'excellence en  ",
+    "titleLine2": "Formation professionnelle  ",
+    "description": "ACTL propose une gamme complète de formations  TESTprofessionnelles dans divers secteurs : automobile, logistique, commerce, finances et ressources humaines, pour préparer les experts de demain.",
     "scrollText": "Découvrir",
     "showScrollIndicator": true,
     "scrollPositionX": 52,
@@ -81,22 +81,6 @@
     "description": "Découvrez nos programmes de formation conçus pour développer vos compétences professionnelles dans divers secteurs. ",
     "items": [
       {
-        "id": "mecanique",
-        "title": "Mécanique Automobile TEST",
-        "description": "Maîtrisez les fondements de la mécanique automobile avec notre formation pratique et complète. TEST",
-        "image": "/rachef-uploads/1754218690312-Formation-automobile-nice-campus-sud-des-metiers-6.jpg",
-        "icon": "Wrench",
-        "path": "/formations/mecanique",
-        "programStructure": [],
-        "courseContent": [],
-        "careerOpportunities": [],
-        "workshopTitle": "",
-        "workshopDescription": "",
-        "workshopImages": [],
-        "pageId": "mecaniqueFormation",
-        "showOnHome": true
-      },
-      {
         "id": "diagnostic",
         "title": "Diagnostic Automobile",
         "description": "Devenez expert en diagnostic électronique et technique des véhicules modernes.",
@@ -112,6 +96,22 @@
         "icon": "Wallet",
         "showOnHome": true,
         "path": "/formations/finance"
+      },
+      {
+        "id": "mecanique",
+        "title": "Mécanique Automobile TEST",
+        "description": "Maîtrisez les fondements de la mécanique automobile avec notre formation pratique et complète. TEST",
+        "image": "/rachef-uploads/1754218690312-Formation-automobile-nice-campus-sud-des-metiers-6.jpg",
+        "icon": "Wrench",
+        "path": "/formations/mecanique",
+        "programStructure": [],
+        "courseContent": [],
+        "careerOpportunities": [],
+        "workshopTitle": "",
+        "workshopDescription": "",
+        "workshopImages": [],
+        "pageId": "mecaniqueFormation",
+        "showOnHome": true
       },
       {
         "id": "commerce",
@@ -318,11 +318,11 @@
     ]
   },
   "contact": {
-    "title": "Prêt à démarrer votre formation professionnelle ?",
+    "title": "Prêt à démarrer votre formation professionnelle ? ",
     "contactInfoTitle": "Contactez-nous",
-    "description": "Contactez-nous dès aujourd'hui pour obtenir plus d'informations sur nos programmes ou pour vous inscrire à une formation. ",
+    "description": "Contactez-nous dès aujourd'hui pour obtenir plus d'informations sur nos programmes ou pour vous inscrire à une formation.  ",
     "button": {
-      "text": "Contactez-nous",
+      "text": "Contactez-nous ",
       "path": "/contact"
     },
     "info": {
