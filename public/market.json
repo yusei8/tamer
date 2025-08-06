@@ -1,0 +1,116 @@
+{
+  "registrations": [
+    {
+      "id": "reg_001",
+      "code": "ACTL-M2K5H9-XR4P",
+      "market": {
+        "id": "market-001",
+        "title": "Fourniture d'équipements de formation automobile"
+      },
+      "userData": {
+        "nom": "BENALI",
+        "prenom": "Ahmed",
+        "entreprise": "TechAuto Solutions Algérie",
+        "email": "a.benali@techauto.dz",
+        "telephone": "0561234567",
+        "adresse": "Zone Industrielle de Rouiba, Alger",
+        "nif": "099012345678901",
+        "nis": "123456789012345",
+        "rc": "16/00-1234567B25"
+      },
+      "status": "dossier en traitement",
+      "submittedAt": "2025-01-20T10:30:00Z",
+      "documents": {
+        "proposition": "proposition_techauto_001.pdf",
+        "infosPdf": "infos_dupont_001.pdf"
+      },
+      "notes": "",
+      "lastUpdated": "2025-01-21T14:20:00Z"
+    },
+    {
+      "id": "reg_002", 
+      "code": "ACTL-P7N2K8-FM5T",
+      "market": {
+        "id": "market-002",
+        "title": "Services de maintenance des véhicules de formation"
+      },
+      "userData": {
+        "nom": "KADDOUR",
+        "prenom": "Fatima",
+        "entreprise": "AutoService Pro Algérie",
+        "email": "f.kaddour@autoservice.dz",
+        "telephone": "0698765432",
+        "adresse": "Zone d'Activité de Hassi Messaoud, Ouargla",
+        "nif": "099087654321098",
+        "nis": "987654321098765",
+        "rc": "31/00-9876543C18"
+      },
+      "status": "vue",
+      "submittedAt": "2025-01-18T16:45:00Z",
+      "documents": {
+        "proposition": "proposition_autoservice_002.pdf",
+        "infosPdf": "infos_martin_002.pdf"
+      },
+      "notes": "Dossier en cours d'évaluation technique",
+      "lastUpdated": "2025-01-22T09:15:00Z"
+    },
+    {
+      "id": "reg_003",
+      "code": "ACTL-Q9B3L6-VH7R",
+      "market": {
+        "id": "market-001",
+        "title": "Fourniture d'équipements de formation automobile"
+      },
+      "userData": {
+        "nom": "BOUMEDIENE",
+        "prenom": "Karim",
+        "entreprise": "Équipements Formation Algérie",
+        "email": "k.boumediene@equipform.dz",
+        "telephone": "0556789012",
+        "adresse": "Zone Industrielle d'Arzew, Oran",
+        "nif": "099011223344556",
+        "nis": "112233445566778",
+        "rc": "31/00-1122334D20"
+      },
+      "status": "accepter contact dans les plus bref delais",
+      "submittedAt": "2025-01-15T11:20:00Z",
+      "documents": {
+        "proposition": "proposition_equipform_003.pdf",
+        "infosPdf": "infos_bernard_003.pdf"
+      },
+      "notes": "Proposition sélectionnée - Contact immédiat requis",
+      "lastUpdated": "2025-01-23T08:30:00Z"
+    }
+  ],
+  "markets": [
+    {
+      "id": "market-001",
+      "title": "Fourniture d'équipements de formation automobile",
+      "description": "Appel d'offres pour la fourniture d'équipements modernes de diagnostic automobile pour nos ateliers de formation.",
+             "deadline": "2025-03-15",
+       "budget": "1 500 000 DZD",
+      "status": "open",
+      "cahierCharges": "cahier-des-charges-equipements.pdf",
+      "createdAt": "2025-01-10T09:00:00Z",
+      "updatedAt": "2025-01-20T15:30:00Z"
+    },
+    {
+      "id": "market-002",
+      "title": "Services de maintenance des véhicules de formation",
+      "description": "Consultation pour les services de maintenance préventive et corrective des véhicules utilisés pour la formation pratique.",
+                    "deadline": "2025-02-28",
+       "budget": "800 000 DZD",
+       "status": "closed", 
+      "cahierCharges": "cahier-des-charges-maintenance.pdf",
+      "createdAt": "2025-01-05T14:00:00Z",
+      "updatedAt": "2025-01-18T10:45:00Z"
+    }
+  ],
+  "settings": {
+    "encryptionEnabled": true,
+    "notificationEmail": "marches@actl-logitrans.dz",
+    "autoGenerateCode": true,
+    "allowedFileTypes": [".pdf"],
+    "maxFileSize": "10MB"
+  }
+} 
