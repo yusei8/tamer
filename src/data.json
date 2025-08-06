@@ -1,0 +1,458 @@
+{
+  "navbar": {
+    "logo": "/rachef-uploads/895b9f7a-e550-40cd-ad1b-42bc954e2f3d.png",
+    "links": [
+      {
+        "text": "Accueil ",
+        "path": "/"
+      },
+      {
+        "text": "Formations",
+        "subLinks": [
+          {
+            "text": "Catalogue de formation",
+            "path": "/formations/catalogue"
+          },
+          {
+            "text": "Mécanique Automobile TEST",
+            "path": "/formations/mecanique"
+          },
+          {
+            "text": "Diagnostic Automobile",
+            "path": "/formations/diagnostic"
+          },
+          {
+            "text": "Comptabilité & Finance 01",
+            "path": "/formations/finance"
+          },
+          {
+            "text": "Commerce & Marketing",
+            "path": "/formations/commerce"
+          },
+          {
+            "text": "Brevet Professionnel TEST",
+            "path": "/formations/conduite"
+          },
+          {
+            "text": "Ressources Humaines",
+            "path": "/formations/rh"
+          }
+        ]
+      },
+      {
+        "text": "Événements",
+        "path": "/evenements"
+      },
+      {
+        "text": "Marchés et Consultations ",
+        "path": "/marches"
+      },
+      {
+        "text": "Contact ",
+        "path": "/contact"
+      }
+    ]
+  },
+  "hero": {
+    "backgroundImage": "/rachef-uploads/1754383134026-3c4f7367-ac55-4dd5-bd35-16e9d353abe5.png",
+    "title2": "Académie de Transport & Logistique",
+    "titleLine1": "Centre d'excellence en ",
+    "titleLine2": "Formation professionnelle ",
+    "description": "ACTL propose une gamme complète de formations professionnelles dans divers secteurs : automobile, logistique, commerce, finances et ressources humaines, pour préparer les experts de demain.",
+    "scrollText": "Découvrir",
+    "showScrollIndicator": true,
+    "scrollPositionX": 52,
+    "scrollPositionY": 80,
+    "buttons": [
+      {
+        "text": "Découvrez nos formations",
+        "path": "/formations/catalogue",
+        "variant": "primary"
+      },
+      {
+        "text": "Contactez-nous",
+        "path": "/contact",
+        "variant": "secondary"
+      }
+    ]
+  },
+  "formations": {
+    "title": "Nos Formations ",
+    "description": "Découvrez nos programmes de formation conçus pour développer vos compétences professionnelles dans divers secteurs. ",
+    "items": [
+      {
+        "id": "mecanique",
+        "title": "Mécanique Automobile TEST",
+        "description": "Maîtrisez les fondements de la mécanique automobile avec notre formation pratique et complète. TEST",
+        "image": "/rachef-uploads/1754218690312-Formation-automobile-nice-campus-sud-des-metiers-6.jpg",
+        "icon": "Wrench",
+        "path": "/formations/mecanique",
+        "programStructure": [],
+        "courseContent": [],
+        "careerOpportunities": [],
+        "workshopTitle": "",
+        "workshopDescription": "",
+        "workshopImages": [],
+        "pageId": "mecaniqueFormation",
+        "showOnHome": true
+      },
+      {
+        "id": "diagnostic",
+        "title": "Diagnostic Automobile",
+        "description": "Devenez expert en diagnostic électronique et technique des véhicules modernes.",
+        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+        "icon": "CarFront",
+        "showOnHome": true
+      },
+      {
+        "id": "finance",
+        "title": "Comptabilité & Finance 01",
+        "description": "Maîtrisez la comptabilité, l'audit et le contrôle de gestion.",
+        "image": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+        "icon": "Wallet",
+        "showOnHome": true,
+        "path": "/formations/finance"
+      },
+      {
+        "id": "commerce",
+        "title": "Commerce & Marketing",
+        "description": "Développez vos compétences en commerce, marketing et communication professionnelle.",
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+        "icon": "Briefcase",
+        "showOnHome": true
+      },
+      {
+        "id": "conduite",
+        "title": "Brevet Professionnel TEST",
+        "description": "ICI TEXT",
+        "image": "/rachef-uploads/1753795496245-efd45219-3997-4d7a-9529-128a512ac553.png",
+        "icon": "Truck",
+        "path": "/formations/conduite",
+        "programStructure": [],
+        "courseContent": [],
+        "careerOpportunities": [],
+        "workshopTitle": "",
+        "workshopDescription": "",
+        "workshopImages": [],
+        "pageId": "mecaniqueFormation",
+        "isEditing": true,
+        "showOnHome": true
+      },
+      {
+        "id": "rh",
+        "title": "Ressources Humaines",
+        "description": "Formation en gestion des ressources humaines et développement organisationnel.",
+        "image": "/rachef-uploads/1754383067496-a0a0fe11-c309-4f3a-b819-2de3cc49fc44.png",
+        "icon": "Users",
+        "showOnHome": true,
+        "path": "/formations/rh"
+      }
+    ]
+  },
+  "services": {
+    "title": "Nos Services LOL ",
+    "description": "Découvrez les services que nous proposons pour accompagner votre réussite professionnelle. TEST",
+    "items": [
+      {
+        "title": "Laboratoires Techniques",
+        "description": "Accès à des équipements modernes et des laboratoires spécialisés pour une formation pratique",
+        "image": "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
+      },
+      {
+        "title": "Certification Professionnelle",
+        "description": "Obtenez des certifications reconnues par l'industrie pour valoriser votre parcours",
+        "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
+      },
+      {
+        "title": "Accompagnement Personnalisé",
+        "description": "Suivi individuel et coaching pour vous aider à atteindre vos objectifs professionnels",
+        "image": "https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
+      },
+      {
+        "title": "GAGaG TEST",
+        "description": "hahahahahah",
+        "image": "/rachef-uploads/1753800733583-11.jpg"
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Galerie de nos installations",
+    "seeMoreText": "Voir plus de photos et événements",
+    "description": "Découvrez nos installations modernes et nos sessions de formation qui préparent nos étudiants à exceller dans leurs domaines professionnels.",
+    "images": [
+      {
+        "src": "/rachef-uploads/141f3537-1023-404f-97b8-9aca19eba0e8.png",
+        "alt": "Formation pratique en diagnostic automobile",
+        "caption": "Formation pratique encadrée par des experts en diagnostic automobile"
+      },
+      {
+        "src": "/rachef-uploads/f9756b3d-563d-4952-8614-b32d3665f300.png",
+        "alt": "Salle de conférence et formation théorique",
+        "caption": "Salles de formation théorique pour les sessions d'apprentissage"
+      },
+      {
+        "src": "/rachef-uploads/c04192ad-2f56-4cc1-b326-efa7d16f8296.png",
+        "alt": "Salle de formation informatique",
+        "caption": "Nos salles de formation équipées avec des technologies modernes"
+      },
+      {
+        "src": "/rachef-uploads/9dc6d63a-a6ea-4e62-a758-41e537e853cf.png",
+        "alt": "Atelier de mécanique automobile",
+        "caption": "Nos ateliers de formation en mécanique automobile avec équipements professionnels"
+      },
+      {
+        "src": "/rachef-uploads/9195c853-81a1-4e08-85a7-d5ca96753ff3.png",
+        "alt": "Formation technique spécialisée",
+        "caption": "Sessions de formation technique avec présentation interactive"
+      }
+    ]
+  },
+  "facilities": {
+    "title": "Nos Ateliers OK ",
+    "description": "Découvrez nos infrastructures modernes conçues pour offrir la meilleure expérience d'apprentissage possible. TEST",
+    "items": [
+      {
+        "id": 1,
+        "title": "Atelier de diagnostic automobile",
+        "description": "Équipé avec des outils de diagnostic modernes pour les véhicules.",
+        "image": "/rachef-uploads/4d1116a5-d93c-42d7-a4e7-568b80e93ecc.png"
+      },
+      {
+        "id": 2,
+        "title": "Atelier mécanique",
+        "description": "Espace de formation pratique avec pont élévateur et équipements professionnels.",
+        "image": "/rachef-uploads/cfd6266e-c762-4c08-a44a-0a65f5e8c1b4.png"
+      },
+      {
+        "id": 3,
+        "title": "TEST",
+        "description": "tESTTTTTT",
+        "image": "/rachef-uploads/1753800973355-16.jpg"
+      },
+      {
+        "id": 4,
+        "title": "Formation pratique",
+        "description": "Apprentissage en groupe avec des formateurs expérimentés sur de vrais moteurs.",
+        "image": "/rachef-uploads/b5a072e9-93d8-4e0c-8a13-a43d1bdf8f03.png"
+      },
+      {
+        "id": 5,
+        "title": "Laboratoires techniques",
+        "description": "Équipements spécialisés pour la formation pratique aux technologies automobiles.",
+        "image": "/rachef-uploads/5b55f441-69b3-4b42-a800-b056640bd2d0.png"
+      }
+    ]
+  },
+  "events": {
+    "title": "Événements",
+    "description": "Restez informé des derniers événements et opportunités chez ACTL.",
+    "detailsText": "Plus de détails",
+    "items": [
+      {
+        "id": 1,
+        "title": "Skills Olympics 20255",
+        "description": "Compétition internationale mettant en valeur les compétences techniques des jeunes professionnels.",
+        "date": "Avril 2025",
+        "image": "/rachef-uploads/d2fcd2cb-3121-41c7-9958-c4318e7d8263.png",
+        "featured": false,
+        "location": "",
+        "updatedAt": "2025-07-29T08:16:12.093Z"
+      },
+      {
+        "id": 2,
+        "title": "Formation pratique en mécanique",
+        "description": "Session pratique sur le démontage et l'analyse des composants de transmission.",
+        "date": "Formation continue",
+        "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
+      },
+      {
+        "id": 1753785679447,
+        "title": "Test",
+        "description": "TEST",
+        "date": "TEST",
+        "location": "",
+        "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+        "featured": false,
+        "createdAt": "2025-07-29T10:41:19.447Z",
+        "updatedAt": "2025-07-29T10:41:19.447Z"
+      }
+    ]
+  },
+  "downloads": {
+    "title": "Téléchargements",
+    "downloadText": "Télécharger",
+    "description": "Téléchargez nos brochures, calendriers et documents administratifs",
+    "items": [
+      {
+        "id": "brochure",
+        "title": "Brochure des formations ACTL",
+        "description": "Programme complet de toutes nos formations professionnelles",
+        "fileUrl": "/sample-documents/brochure-actl.pdf",
+        "fileSize": "3.2 MB",
+        "fileType": "PDF"
+      },
+      {
+        "id": "calendrier",
+        "title": "Calendrier de formation 2025",
+        "description": "Planning annuel des sessions de formation",
+        "fileUrl": "/sample-documents/calendrier-2025.pdf",
+        "fileSize": "1.8 MB",
+        "fileType": "PDF"
+      },
+      {
+        "id": "reglement",
+        "title": "Règlement intérieur",
+        "description": "Conditions générales et règlement de l'établissement",
+        "fileUrl": "/sample-documents/reglement.pdf",
+        "fileSize": "1.5 MB",
+        "fileType": "PDF"
+      },
+      {
+        "id": "formulaire",
+        "title": "Formulaire d'inscription",
+        "description": "Document à remplir pour toute demande d'inscription",
+        "fileUrl": "/sample-documents/formulaire-inscription.pdf",
+        "fileSize": "0.8 MB",
+        "fileType": "PDF"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Prêt à démarrer votre formation professionnelle ?",
+    "contactInfoTitle": "Contactez-nous",
+    "description": "Contactez-nous dès aujourd'hui pour obtenir plus d'informations sur nos programmes ou pour vous inscrire à une formation. ",
+    "button": {
+      "text": "Contactez-nous",
+      "path": "/contact"
+    },
+    "info": {
+      "phone": "+213 23803732",
+      "email": "s.dg-actl@groupe-logitrans.dz",
+      "address": "Route de la verte Rive Bordj El Kiffan - Alger Nice"
+    },
+    "labels": {
+      "phoneLabel": "Appelez-nous",
+      "emailLabel": "Envoyez-nous un email",
+      "addressLabel": "Notre adresse"
+    },
+    "form": {
+      "name": "Nom complet",
+      "email": "Adresse email",
+      "phone": "Téléphone",
+      "subject": "Sujet",
+      "message": "Message",
+      "submit": "Envoyer le message",
+      "submitting": "Envoi en cours..."
+    },
+    "contactInfo": {
+      "address": "Route de la verte Rive Bordj El Kiffan - Alger",
+      "phone": "+213 23803732",
+      "email": "s.dg-actl@groupe-logitrans.dz",
+      "hours": "Dimanche au Jeudi, 09h00 à 17h00"
+    },
+    "centers": [
+      "Alger",
+      "Hassi Messaoud",
+      "Sétif",
+      "Oran",
+      "Skikda",
+      "Batna",
+      "Béjaïa",
+      "Bouira"
+    ],
+    "privacyConsent": {
+      "title": "J'accepte la loi 18-07 en Algérie",
+      "description": "concernant la protection des données personnelles. Mes données sont sécurisées sur un serveur 100% algérien qui respecte la réglementation nationale. Mes informations ne seront jamais divulguées et restent entièrement confidentielles."
+    },
+    "commercialTeam": [
+      {
+        "name": "HANIZ LIAS - 0770768368 ",
+        "role": "DIRECTEUR DE LA FORMATION ET DE LA PEDAGOGIE"
+      },
+      {
+        "name": "KHEROUANI ADEL - 0780563447",
+        "role": "DIRECTEUR COMMERCIAL"
+      },
+      {
+        "name": "BOUCHENAK AMER - 0770289968",
+        "role": "COMMERCIAL"
+      },
+      {
+        "name": "DAMICHZ ZINAB - 0780803591",
+        "role": "COMMERCIAL"
+      }
+    ]
+  },
+  "footer": {
+    "titles": {
+      "quickLinksTitle": "Liens Rapides",
+      "contactTitle": "Contact ",
+      "teamTitle": "Équipe commerciale: "
+    },
+    "logo": "/rachef-uploads/1753815061573-895b9f7a-e550-40cd-ad1b-42bc954e2f3d.png",
+    "description": "École de formation professionnelle spécialisée dans le domaine de l'automobile et de la logistique.",
+    "groupLogo": "/rachef-uploads/1753815069951-d30e9f68-60af-4517-a13f-dc4c3610eb9a.png",
+    "groupText": "Une filiale du groupe ",
+    "quickLinks": [
+      {
+        "text": "Accueil",
+        "path": "/"
+      },
+      {
+        "text": "Formations",
+        "path": "/formations/mecanique"
+      },
+      {
+        "text": "Événements",
+        "path": "/evenements"
+      },
+      {
+        "text": "Marchés et Consultations",
+        "path": "/marches"
+      },
+      {
+        "text": "Contact",
+        "path": "/contact"
+      }
+    ],
+    "contactInfo": {
+      "address": "Route de la verte Rive Bordj El Kiffan - Alger ",
+      "phone": "+213 21 21 11 ",
+      "email": "s.dg-actl@groupe-logitrans.dz ",
+      "hours": "Heures d'ouverture: Dimanche au Jeudi, 09h00 à 17h00 "
+    },
+    "commercialTeam": [
+      {
+        "name": "HANIZ LIAS ",
+        "phone": "0770768368 ",
+        "role": "DIRECTEUR DE LA FORMATION ET DE LA PEDAGOGIE  "
+      },
+      {
+        "name": "KHEROUANI ADEL",
+        "phone": "0780563447",
+        "role": "DIRECTEUR COMMERCIAL"
+      },
+      {
+        "name": "BOUCHENAK AMER",
+        "phone": "0770289968",
+        "role": "COMMERCIAL"
+      },
+      {
+        "name": "DAMICHZ ZINAB",
+        "phone": "0780803591",
+        "role": "COMMERCIAL"
+      }
+    ],
+    "copyright": "© ACTL. Tous droits réservés - 2025"
+  },
+  "evenements": {
+    "events": {
+      "0": {
+        "showOnHome": true
+      },
+      "1": {
+        "showOnHome": true
+      }
+    }
+  }
+}

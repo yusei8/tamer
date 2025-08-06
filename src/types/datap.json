@@ -1,0 +1,1651 @@
+{
+  "catalogueFormation": {
+    "title": "<font color=\"#ffffff\">ACTL Catalogue de Formation</font>",
+    "description": "<font color=\"#ffffff\">Découvrez l'ensemble de nos formations disponibles dans notre catalogue complet</font>",
+    "pdfUrl": "/rachef-uploads/1753689727500-ACTL-Catalogue-Formations (2).pdf",
+    "error": {
+      "title": "Problème technique détecté",
+      "details": "Détails de l'erreur :",
+      "solutions": [
+        "Vérifiez votre connexion internet",
+        "Actualisez la page (F5)",
+        "Testez avec ce lien direct",
+        "Contactez notre support technique"
+      ],
+      "downloadText": "Télécharger quand même",
+      "retryText": "Réessayer"
+    },
+    "loading": {
+      "title": "Chargement du catalogue...",
+      "subtitle": "Préparation de votre catalogue"
+    },
+    "downloadButton": "Télécharger le catalogue",
+    "contactButton": "Nous contacter "
+  },
+  "commerceFormation": {
+    "title": "Formation Commerce et Marketing",
+    "description": "Notre formation en commerce et marketing vous prépare aux défis du monde des affaires moderne avec une approche pratique et professionnelle.",
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+    "programStructure": [
+      "Formation théorique approfondie",
+      "Projets pratiques en équipe",
+      "Stage en entreprise",
+      "Accompagnement à l'insertion professionnelle"
+    ],
+    "courseContent": [
+      "Techniques de vente et négociation",
+      "Marketing digital et stratégie",
+      "Communication professionnelle",
+      "Gestion de la relation client"
+    ],
+    "careerOpportunities": [
+      "Commercial B2B ou B2C",
+      "Chargé de marketing",
+      "Responsable communication",
+      "Chef de produit"
+    ],
+    "cta": {
+      "title": "Lancez votre carrière dans le commerce et le marketing",
+      "description": "Inscrivez-vous dès maintenant à notre formation complète et développez des compétences essentielles pour réussir dans le monde des affaires.",
+      "buttonText": "S'inscrire maintenant"
+    }
+  },
+  "conduiteFormation": {
+    "title": "Brevet Professionnel de Conduite",
+    "description": "Notre formation en conduite professionnelle comprend la conduite défensive et l'habilitation permis de conduire pour répondre aux besoins du secteur.",
+    "image": "/rachef-uploads/69ccc86d-35f5-435e-a4a9-6748545e1124.png",
+    "programStructure": [
+      "Formation théorique complète",
+      "Conduite pratique supervisée",
+      "Certification professionnelle",
+      "Accompagnement personnalisé"
+    ],
+    "courseContent": [
+      "Conduite défensive et préventive",
+      "Habilitation permis de conduire",
+      "Sécurité routière avancée",
+      "Transport de marchandises et de personnes"
+    ],
+    "careerOpportunities": [
+      "Chauffeur professionnel",
+      "Moniteur d'auto-école",
+      "Formateur en sécurité routière",
+      "Responsable logistique transport"
+    ],
+    "cta": {
+      "title": "Devenez un professionnel de la conduite",
+      "description": "Inscrivez-vous dès maintenant à notre formation de conduite professionnelle et obtenez votre brevet professionnel.",
+      "buttonText": "S'inscrire maintenant"
+    },
+    "sections": []
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "description": "Vous avez des questions sur nos formations ou souhaitez vous inscrire ? N'hésitez pas à nous contacter.",
+    "form": {
+      "name": "Nom complet",
+      "email": "Email",
+      "phone": "Téléphone",
+      "subject": "Sujet",
+      "message": "Message",
+      "submit": "Envoyer le message",
+      "submitting": "Envoi en cours..."
+    },
+    "contactInfo": {
+      "address": "Route de la verte Rive Bordj El Kiffan - Alger",
+      "phone": "+213 23803732",
+      "email": "s.dg-actl@groupe-logitrans.dz",
+      "hours": "Dimanche au Jeudi, 09h00 à 17h00"
+    },
+    "centers": [
+      "Alger",
+      "Hassi Messaoud",
+      "Sétif",
+      "Oran",
+      "Skikda",
+      "Batna",
+      "Béjaïa",
+      "Bouira"
+    ],
+    "commercialTeam": [
+      {
+        "name": "HANIZ LIAS - 0770768368",
+        "role": "DIRECTEUR DE LA FORMATION ET DE LA PEDAGOGIE"
+      },
+      {
+        "name": "KHEROUANI ADEL - 0780563447",
+        "role": "DIRECTEUR COMMERCIAL"
+      },
+      {
+        "name": "BOUCHENAK AMER - 0770289968",
+        "role": "COMMERCIAL"
+      },
+      {
+        "name": "DAMICHZ ZINAB - 0780803591",
+        "role": "COMMERCIAL"
+      }
+    ]
+  },
+  "diagnosticFormation": {
+    "title": "Formation en Diagnostic Automobile ",
+    "description": "Notre formation spécialisée en diagnostic automobile vous permet de maîtriser les outils et techniques modernes pour l'identification et la résolution des problèmes complexes des véhicules. ",
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+    "programStructure": [],
+    "courseContent": [],
+    "careerOpportunities": [],
+    "equipmentTitle": "Équipements de diagnostic",
+    "equipmentDescription": "Découvrez les équipements modernes que vous utiliserez pendant votre formation.",
+    "equipmentImages": [
+      "/rachef-uploads/4d1116a5-d93c-42d7-a4e7-568b80e93ecc.png",
+      "/rachef-uploads/cfd6266e-c762-4c08-a44a-0a65f5e8c1b4.png",
+      "/rachef-uploads/b5a072e9-93d8-4e0c-8a13-a43d1bdf8f03.png"
+    ],
+    "cta": {
+      "title": "Devenez un expert en diagnostic automobile  ",
+      "description": "Inscrivez-vous à notre formation spécialisée et acquérez des compétences essentielles pour l'industrie automobile moderne. ",
+      "buttonText": "S'inscrire maintenant "
+    }
+  },
+  "evenements": {
+    "title": "Événements et Actualités",
+    "description": "Découvrez les événements, formations spéciales et actualités de l'ACTL. Restez informé des dernières opportunités et des innovations dans le secteur automobile.",
+    "events": [
+      {
+        "id": 1,
+        "title": "Skills Olympics 2025",
+        "description": "Compétition internationale mettant en valeur les compétences techniques des jeunes professionnels dans le secteur automobile. Organisé en partenariat avec Stellantis, cet événement permet aux talents de montrer leur expertise et de concourir pour des prix prestigieux.",
+        "date": "Avril 2025",
+        "location": "Centre ACTL, El Mohammedia",
+        "image": "/rachef-uploads/8511aa00-c530-4813-ae33-ac5881e795c3.png",
+        "featured": true
+      },
+      {
+        "id": 2,
+        "title": "Formation pratique en mécanique",
+        "description": "Session pratique sur le démontage et l'analyse des composants de transmission automobile. Cette formation intensive est dirigée par des experts du secteur et offre une expérience hands-on avec des équipements de pointe.",
+        "date": "Formation continue",
+        "location": "Atelier principal ACTL",
+        "image": "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
+      },
+      {
+        "id": 3,
+        "title": "Séminaire sur les technologies automobiles modernes",
+        "description": "Présentation des dernières technologies et innovations dans l'industrie automobile, avec des démonstrations pratiques et des discussions avec des experts du secteur.",
+        "date": "Organisation régulière",
+        "location": "Amphithéâtre ACTL",
+        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
+      },
+      {
+        "id": 4,
+        "title": "Journée portes ouvertes",
+        "description": "Découvrez nos installations et nos formations lors de notre journée portes ouvertes. Rencontrez nos formateurs, explorez nos ateliers, et apprenez-en plus sur nos programmes de formation professionnelle.",
+        "date": "Trimestriel",
+        "location": "Centre ACTL, El Mohammedia",
+        "image": "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
+      }
+    ],
+    "calendar": [
+      {
+        "title": "Skills Olympics 2025",
+        "description": "Compétition internationale de compétences",
+        "date": "Avril 2025"
+      },
+      {
+        "title": "Journée portes ouvertes",
+        "description": "Découverte des installations et des formations",
+        "date": "Trimestriel"
+      },
+      {
+        "title": "Séminaire technologique",
+        "description": "Présentation des dernières innovations",
+        "date": "Organisation régulière"
+      }
+    ],
+    "cta": {
+      "title": "Intéressé par nos événements ?",
+      "description": "Contactez-nous pour plus d'informations sur nos événements ou pour vous inscrire à une formation spéciale.",
+      "buttonText": "Nous contacter"
+    }
+  },
+  "financeFormation": {
+    "title": "Formation Finance et Comptabilité",
+    "description": "Maîtrisez les fondamentaux de la finance, de la comptabilité et du contrôle de gestion avec notre formation professionnelle.",
+    "image": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+    "programStructure": [
+      "Formation complète de 6 à 18 mois selon le domaine",
+      "Cours théoriques et pratiques",
+      "Ateliers pratiques intensifs",
+      "Stage professionnel en entreprise"
+    ],
+    "teachingMethods": [
+      "Formation en présentiel",
+      "Études de cas pratiques",
+      "Projets professionnels",
+      "Accompagnement personnalisé"
+    ],
+    "careerOpportunities": [
+      "Technicien spécialisé",
+      "Agent commercial",
+      "Assistant de gestion",
+      "Responsable d'équipe"
+    ],
+    "certifications": [
+      {
+        "title": "Certification Professionnelle",
+        "description": "Diplôme reconnu par l'État"
+      },
+      {
+        "title": "Spécialisation Métier",
+        "description": "Expertise dans votre domaine d'activité"
+      },
+      {
+        "title": "Compétences Transversales",
+        "description": "Savoir-être et soft skills"
+      },
+      {
+        "title": "Expertise Technique",
+        "description": "Maîtrise des outils professionnels"
+      }
+    ],
+    "galleryImages": [
+      "/rachef-uploads/4e0e7920-d225-40a8-a6a9-db736ee19fbf.png",
+      "/rachef-uploads/966e7fd1-9ff7-40d8-9256-cf0ef163c26c.png",
+      "/rachef-uploads/84aec685-3461-4451-893d-d748e32f7511.png"
+    ],
+    "cta": {
+      "title": "Commencez votre carrière professionnelle aujourd'hui",
+      "description": "Rejoignez notre programme complet de formation professionnelle et ouvrez les portes à une carrière réussie dans votre domaine d'activité.",
+      "buttonText": "S'inscrire maintenant"
+    }
+  },
+  "formationProfessionnelle": {
+    "title": "Formation Professionnelle",
+    "description": "Notre programme de formation professionnelle est conçu pour développer des compétences pratiques et techniques dans plusieurs domaines d'activité, prêtes à être appliquées dans l'industrie.",
+    "image": "/rachef-uploads/702b4f61-ccf9-4db2-a5cc-90603e10c25c.png",
+    "trainingDomains": [
+      {
+        "icon": "Briefcase",
+        "title": "Commerce",
+        "description": "Techniques de vente, négociation commerciale, gestion de la relation client"
+      },
+      {
+        "icon": "Calculator",
+        "title": "Finance",
+        "description": "Comptabilité, gestion financière, analyse budgétaire"
+      },
+      {
+        "icon": "Truck",
+        "title": "Logistique",
+        "description": "Gestion des stocks, transport, chaîne d'approvisionnement"
+      },
+      {
+        "icon": "Users",
+        "title": "Ressources Humaines",
+        "description": "Gestion du personnel, recrutement, formation"
+      },
+      {
+        "icon": "Scale",
+        "title": "Droit",
+        "description": "Droit du travail, droit commercial, procédures juridiques"
+      },
+      {
+        "icon": "Wrench",
+        "title": "Automobile",
+        "description": "Mécanique automobile, diagnostic, maintenance"
+      }
+    ],
+    "programStructure": [
+      "Formation complète de 6 à 18 mois selon le domaine",
+      "Cours théoriques et pratiques",
+      "Ateliers pratiques intensifs",
+      "Stage professionnel en entreprise"
+    ],
+    "teachingMethods": [
+      "Formation en présentiel",
+      "Études de cas pratiques",
+      "Projets professionnels",
+      "Accompagnement personnalisé"
+    ],
+    "careerOpportunities": [
+      "Technicien spécialisé",
+      "Agent commercial",
+      "Assistant de gestion",
+      "Responsable d'équipe"
+    ],
+    "certifications": [
+      {
+        "title": "Certification Professionnelle",
+        "description": "Diplôme reconnu par l'État"
+      },
+      {
+        "title": "Spécialisation Métier",
+        "description": "Expertise dans votre domaine d'activité"
+      },
+      {
+        "title": "Compétences Transversales",
+        "description": "Savoir-être et soft skills"
+      },
+      {
+        "title": "Expertise Technique",
+        "description": "Maîtrise des outils professionnels"
+      }
+    ],
+    "galleryImages": [
+      "/rachef-uploads/4e0e7920-d225-40a8-a6a9-db736ee19fbf.png",
+      "/rachef-uploads/966e7fd1-9ff7-40d8-9256-cf0ef163c26c.png",
+      "/rachef-uploads/84aec685-3461-4451-893d-d748e32f7511.png"
+    ],
+    "cta": {
+      "title": "Commencez votre carrière professionnelle aujourd'hui",
+      "description": "Rejoignez notre programme complet de formation professionnelle et ouvrez les portes à une carrière réussie dans votre domaine d'activité.",
+      "buttonText": "S'inscrire maintenant"
+    }
+  },
+  "marches": {
+    "title": "Marchés et Consultations",
+    "description": "Consultez les appels d'offres, marchés publics et consultations en cours de l'ACTL. Trouvez des opportunités de collaboration et de partenariat.",
+    "info": {
+      "title": "Information importante",
+      "content": "Pour participer à nos consultations, veuillez télécharger le dossier complet et soumettre votre proposition avant la date de clôture. Pour toute question, contactez-nous par email à s.dg-actl@groupe-logitrans.dz."
+    },
+    "howToParticipate": [
+      {
+        "icon": "Download",
+        "title": "1. Téléchargez les documents",
+        "description": "Téléchargez le cahier des charges et tous les documents nécessaires pour comprendre les exigences."
+      },
+      {
+        "icon": "FileText",
+        "title": "2. Préparez votre proposition",
+        "description": "Élaborez une proposition technique et financière conforme aux spécifications demandées."
+      },
+      {
+        "icon": "Calendar",
+        "title": "3. Soumettez avant la date limite",
+        "description": "Envoyez votre dossier complet avant la date de clôture indiquée dans l'annonce."
+      }
+    ],
+    "documents": [
+      {
+        "title": "Formulaire de soumission",
+        "description": "Formulaire standard pour soumettre votre proposition et vos informations de contact."
+      },
+      {
+        "title": "Conditions générales",
+        "description": "Document détaillant les termes et conditions standard pour nos consultations."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Comment puis-je être informé des nouveaux appels d'offres ?",
+        "answer": "Consultez régulièrement cette page ou contactez-nous pour être ajouté à notre liste de diffusion."
+      },
+      {
+        "question": "Quels documents dois-je fournir avec ma proposition ?",
+        "answer": "Chaque consultation précise les documents requis. Généralement, vous devrez fournir une proposition technique, une proposition financière et les documents administratifs de votre entreprise."
+      },
+      {
+        "question": "Comment soumettre ma proposition ?",
+        "answer": "Les propositions doivent être soumises au format spécifié dans le dossier de consultation, généralement sous pli fermé à l'adresse de l'ACTL, avec la référence de la consultation clairement indiquée."
+      }
+    ],
+    "cta": {
+      "title": "Besoin d'informations supplémentaires ?",
+      "description": "Contactez notre équipe pour obtenir plus de détails sur nos consultations en cours ou pour poser vos questions.",
+      "buttonText": "Nous contacter"
+    }
+  },
+  "mecaniqueFormation": {
+    "title": "Formation en Mécanique Automobile",
+    "description": "Notre formation en mécanique automobile vous prépare à maîtriser tous les aspects techniques des véhicules modernes, des systèmes mécaniques aux composants électroniques. et je test brothers",
+    "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+    "programStructure": [
+      "Formation théorique approfondie",
+      "Formation pratique en atelier",
+      "Stage en entreprise",
+      "Évaluation continue des compétences"
+    ],
+    "courseContent": [
+      "Fondements de la mécanique automobile",
+      "Systèmes de moteur et transmission",
+      "Systèmes électriques et électroniques",
+      "Systèmes de suspension et direction"
+    ],
+    "careerOpportunities": [
+      "Mécanicien automobile",
+      "Technicien de maintenance",
+      "Conseiller technique",
+      "Entrepreneur automobile"
+    ],
+    "workshopTitle": "Nos ateliers de formation",
+    "workshopDescription": "Découvrez nos installations modernes où vous développerez vos compétences pratiques.",
+    "workshopImages": [
+      "/rachef-uploads/4d1116a5-d93c-42d7-a4e7-568b80e93ecc.png",
+      "/rachef-uploads/cfd6266e-c762-4c08-a44a-0a65f5e8c1b4.png",
+      "/rachef-uploads/b5a072e9-93d8-4e0c-8a13-a43d1bdf8f03.png"
+    ],
+    "cta": {
+      "title": "Prêt à lancer votre carrière en mécanique automobile ?",
+      "description": "Inscrivez-vous dès maintenant à notre formation complète et développez des compétences recherchées dans le secteur automobile.",
+      "buttonText": "S'inscrire maintenant"
+    },
+    "datap": {
+      "mecaniqueFormation": {
+        "title": "Formation en Mécanique Automobile",
+        "description": "Notre formation en mécanique automobile vous prépare à maîtriser tous les aspects techniques des véhicules modernes, des systèmes mécaniques aux composants électroniques. et quelque truc de test",
+        "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+        "programStructure": [
+          "Formation théorique approfondie",
+          "Formation pratique en atelier",
+          "Stage en entreprise",
+          "Évaluation continue des compétences"
+        ],
+        "courseContent": [
+          "Fondements de la mécanique automobile",
+          "Systèmes de moteur et transmission",
+          "Systèmes électriques et électroniques",
+          "Systèmes de suspension et direction"
+        ],
+        "careerOpportunities": [
+          "Mécanicien automobile",
+          "Technicien de maintenance",
+          "Conseiller technique",
+          "Entrepreneur automobile"
+        ],
+        "workshopTitle": "Nos ateliers de formation",
+        "workshopDescription": "Découvrez nos installations modernes où vous développerez vos compétences pratiques.",
+        "workshopImages": [
+          "/rachef-uploads/4d1116a5-d93c-42d7-a4e7-568b80e93ecc.png",
+          "/rachef-uploads/cfd6266e-c762-4c08-a44a-0a65f5e8c1b4.png",
+          "/rachef-uploads/b5a072e9-93d8-4e0c-8a13-a43d1bdf8f03.png"
+        ],
+        "cta": {
+          "title": "Prêt à lancer votre carrière en mécanique automobile ?",
+          "description": "Inscrivez-vous dès maintenant à notre formation complète et développez des compétences recherchées dans le secteur automobile.",
+          "buttonText": "S'inscrire maintenant"
+        },
+        "datap": {
+          "mecaniqueFormation": {
+            "title": "Formation en Mécanique Automobile",
+            "description": "Notre formation en mécanique automobile vous prépare à maîtriser tous les aspects techniques des véhicules modernes, des systèmes mécaniques aux composants électroniques. et quelque truc de tes",
+            "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+            "programStructure": [
+              "Formation théorique approfondie",
+              "Formation pratique en atelier",
+              "Stage en entreprise",
+              "Évaluation continue des compétences"
+            ],
+            "courseContent": [
+              "Fondements de la mécanique automobile",
+              "Systèmes de moteur et transmission",
+              "Systèmes électriques et électroniques",
+              "Systèmes de suspension et direction"
+            ],
+            "careerOpportunities": [
+              "Mécanicien automobile",
+              "Technicien de maintenance",
+              "Conseiller technique",
+              "Entrepreneur automobile"
+            ],
+            "workshopTitle": "Nos ateliers de formation",
+            "workshopDescription": "Découvrez nos installations modernes où vous développerez vos compétences pratiques.",
+            "workshopImages": [
+              "/rachef-uploads/4d1116a5-d93c-42d7-a4e7-568b80e93ecc.png",
+              "/rachef-uploads/cfd6266e-c762-4c08-a44a-0a65f5e8c1b4.png",
+              "/rachef-uploads/b5a072e9-93d8-4e0c-8a13-a43d1bdf8f03.png"
+            ],
+            "cta": {
+              "title": "Prêt à lancer votre carrière en mécanique automobile ?",
+              "description": "Inscrivez-vous dès maintenant à notre formation complète et développez des compétences recherchées dans le secteur automobile.",
+              "buttonText": "S'inscrire maintenant"
+            },
+            "datap": {
+              "mecaniqueFormation": {
+                "title": "Formation en Mécanique Automobile",
+                "description": "Notre formation en mécanique automobile vous prépare à maîtriser tous les aspects techniques des véhicules modernes, des systèmes mécaniques aux composants électroniques. et quelque truc de te",
+                "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+                "programStructure": [
+                  "Formation théorique approfondie",
+                  "Formation pratique en atelier",
+                  "Stage en entreprise",
+                  "Évaluation continue des compétences"
+                ],
+                "courseContent": [
+                  "Fondements de la mécanique automobile",
+                  "Systèmes de moteur et transmission",
+                  "Systèmes électriques et électroniques",
+                  "Systèmes de suspension et direction"
+                ],
+                "careerOpportunities": [
+                  "Mécanicien automobile",
+                  "Technicien de maintenance",
+                  "Conseiller technique",
+                  "Entrepreneur automobile"
+                ],
+                "workshopTitle": "Nos ateliers de formation",
+                "workshopDescription": "Découvrez nos installations modernes où vous développerez vos compétences pratiques.",
+                "workshopImages": [
+                  "/rachef-uploads/4d1116a5-d93c-42d7-a4e7-568b80e93ecc.png",
+                  "/rachef-uploads/cfd6266e-c762-4c08-a44a-0a65f5e8c1b4.png",
+                  "/rachef-uploads/b5a072e9-93d8-4e0c-8a13-a43d1bdf8f03.png"
+                ],
+                "cta": {
+                  "title": "Prêt à lancer votre carrière en mécanique automobile ?",
+                  "description": "Inscrivez-vous dès maintenant à notre formation complète et développez des compétences recherchées dans le secteur automobile.",
+                  "buttonText": "S'inscrire maintenant"
+                },
+                "datap": {
+                  "mecaniqueFormation": {
+                    "title": "Formation en Mécanique Automobile",
+                    "description": "Notre formation en mécanique automobile vous prépare à maîtriser tous les aspects techniques des véhicules modernes, des systèmes mécaniques aux composants électroniques. et quelque truc de t",
+                    "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+                    "programStructure": [
+                      "Formation théorique approfondie",
+                      "Formation pratique en atelier",
+                      "Stage en entreprise",
+                      "Évaluation continue des compétences"
+                    ],
+                    "courseContent": [
+                      "Fondements de la mécanique automobile",
+                      "Systèmes de moteur et transmission",
+                      "Systèmes électriques et électroniques",
+                      "Systèmes de suspension et direction"
+                    ],
+                    "careerOpportunities": [
+                      "Mécanicien automobile",
+                      "Technicien de maintenance",
+                      "Conseiller technique",
+                      "Entrepreneur automobile"
+                    ],
+                    "workshopTitle": "Nos ateliers de formation",
+                    "workshopDescription": "Découvrez nos installations modernes où vous développerez vos compétences pratiques.",
+                    "workshopImages": [
+                      "/rachef-uploads/4d1116a5-d93c-42d7-a4e7-568b80e93ecc.png",
+                      "/rachef-uploads/cfd6266e-c762-4c08-a44a-0a65f5e8c1b4.png",
+                      "/rachef-uploads/b5a072e9-93d8-4e0c-8a13-a43d1bdf8f03.png"
+                    ],
+                    "cta": {
+                      "title": "Prêt à lancer votre carrière en mécanique automobile ?",
+                      "description": "Inscrivez-vous dès maintenant à notre formation complète et développez des compétences recherchées dans le secteur automobile.",
+                      "buttonText": "S'inscrire maintenant"
+                    },
+                    "datap": {
+                      "mecaniqueFormation": {
+                        "title": "Formation en Mécanique Automobile",
+                        "description": "Notre formation en mécanique automobile vous prépare à maîtriser tous les aspects techniques des véhicules modernes, des systèmes mécaniques aux composants électroniques. et quelque truc de&nbsp;",
+                        "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+                        "programStructure": [
+                          "Formation théorique approfondie",
+                          "Formation pratique en atelier",
+                          "Stage en entreprise",
+                          "Évaluation continue des compétences"
+                        ],
+                        "courseContent": [
+                          "Fondements de la mécanique automobile",
+                          "Systèmes de moteur et transmission",
+                          "Systèmes électriques et électroniques",
+                          "Systèmes de suspension et direction"
+                        ],
+                        "careerOpportunities": [
+                          "Mécanicien automobile",
+                          "Technicien de maintenance",
+                          "Conseiller technique",
+                          "Entrepreneur automobile"
+                        ],
+                        "workshopTitle": "Nos ateliers de formation",
+                        "workshopDescription": "Découvrez nos installations modernes où vous développerez vos compétences pratiques.",
+                        "workshopImages": [
+                          "/rachef-uploads/4d1116a5-d93c-42d7-a4e7-568b80e93ecc.png",
+                          "/rachef-uploads/cfd6266e-c762-4c08-a44a-0a65f5e8c1b4.png",
+                          "/rachef-uploads/b5a072e9-93d8-4e0c-8a13-a43d1bdf8f03.png"
+                        ],
+                        "cta": {
+                          "title": "Prêt à lancer votre carrière en mécanique automobile ?",
+                          "description": "Inscrivez-vous dès maintenant à notre formation complète et développez des compétences recherchées dans le secteur automobile.",
+                          "buttonText": "S'inscrire maintenant"
+                        },
+                        "datap": {
+                          "mecaniqueFormation": {
+                            "title": "Formation en Mécanique Automobile",
+                            "description": "Notre formation en mécanique automobile vous prépare à maîtriser tous les aspects techniques des véhicules modernes, des systèmes mécaniques aux composants électroniques. et quelque truc de",
+                            "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+                            "programStructure": [
+                              "Formation théorique approfondie",
+                              "Formation pratique en atelier",
+                              "Stage en entreprise",
+                              "Évaluation continue des compétences"
+                            ],
+                            "courseContent": [
+                              "Fondements de la mécanique automobile",
+                              "Systèmes de moteur et transmission",
+                              "Systèmes électriques et électroniques",
+                              "Systèmes de suspension et direction"
+                            ],
+                            "careerOpportunities": [
+                              "Mécanicien automobile",
+                              "Technicien de maintenance",
+                              "Conseiller technique",
+                              "Entrepreneur automobile"
+                            ],
+                            "workshopTitle": "Nos ateliers de formation",
+                            "workshopDescription": "Découvrez nos installations modernes où vous développerez vos compétences pratiques.",
+                            "workshopImages": [
+                              "/rachef-uploads/4d1116a5-d93c-42d7-a4e7-568b80e93ecc.png",
+                              "/rachef-uploads/cfd6266e-c762-4c08-a44a-0a65f5e8c1b4.png",
+                              "/rachef-uploads/b5a072e9-93d8-4e0c-8a13-a43d1bdf8f03.png"
+                            ],
+                            "cta": {
+                              "title": "Prêt à lancer votre carrière en mécanique automobile ?",
+                              "description": "Inscrivez-vous dès maintenant à notre formation complète et développez des compétences recherchées dans le secteur automobile.",
+                              "buttonText": "S'inscrire maintenant"
+                            },
+                            "datap": {
+                              "mecaniqueFormation": {
+                                "title": "Formation en Mécanique Automobile",
+                                "description": "Notre formation en mécanique automobile vous prépare à maîtriser tous les aspects techniques des véhicules modernes, des systèmes mécaniques aux composants électroniques. et quelque truc d",
+                                "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+                                "programStructure": [
+                                  "Formation théorique approfondie",
+                                  "Formation pratique en atelier",
+                                  "Stage en entreprise",
+                                  "Évaluation continue des compétences"
+                                ],
+                                "courseContent": [
+                                  "Fondements de la mécanique automobile",
+                                  "Systèmes de moteur et transmission",
+                                  "Systèmes électriques et électroniques",
+                                  "Systèmes de suspension et direction"
+                                ],
+                                "careerOpportunities": [
+                                  "Mécanicien automobile",
+                                  "Technicien de maintenance",
+                                  "Conseiller technique",
+                                  "Entrepreneur automobile"
+                                ],
+                                "workshopTitle": "Nos ateliers de formation",
+                                "workshopDescription": "Découvrez nos installations modernes où vous développerez vos compétences pratiques.",
+                                "workshopImages": [
+                                  "/rachef-uploads/4d1116a5-d93c-42d7-a4e7-568b80e93ecc.png",
+                                  "/rachef-uploads/cfd6266e-c762-4c08-a44a-0a65f5e8c1b4.png",
+                                  "/rachef-uploads/b5a072e9-93d8-4e0c-8a13-a43d1bdf8f03.png"
+                                ],
+                                "cta": {
+                                  "title": "Prêt à lancer votre carrière en mécanique automobile ?",
+                                  "description": "Inscrivez-vous dès maintenant à notre formation complète et développez des compétences recherchées dans le secteur automobile.",
+                                  "buttonText": "S'inscrire maintenant"
+                                },
+                                "datap": {
+                                  "mecaniqueFormation": {
+                                    "title": "Formation en Mécanique Automobile",
+                                    "description": "Notre formation en mécanique automobile vous prépare à maîtriser tous les aspects techniques des véhicules modernes, des systèmes mécaniques aux composants électroniques. et quelque truc&nbsp;",
+                                    "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+                                    "programStructure": [
+                                      "Formation théorique approfondie",
+                                      "Formation pratique en atelier",
+                                      "Stage en entreprise",
+                                      "Évaluation continue des compétences"
+                                    ],
+                                    "courseContent": [
+                                      "Fondements de la mécanique automobile",
+                                      "Systèmes de moteur et transmission",
+                                      "Systèmes électriques et électroniques",
+                                      "Systèmes de suspension et direction"
+                                    ],
+                                    "careerOpportunities": [
+                                      "Mécanicien automobile",
+                                      "Technicien de maintenance",
+                                      "Conseiller technique",
+                                      "Entrepreneur automobile"
+                                    ],
+                                    "workshopTitle": "Nos ateliers de formation",
+                                    "workshopDescription": "Découvrez nos installations modernes où vous développerez vos compétences pratiques.",
+                                    "workshopImages": [
+                                      "/rachef-uploads/4d1116a5-d93c-42d7-a4e7-568b80e93ecc.png",
+                                      "/rachef-uploads/cfd6266e-c762-4c08-a44a-0a65f5e8c1b4.png",
+                                      "/rachef-uploads/b5a072e9-93d8-4e0c-8a13-a43d1bdf8f03.png"
+                                    ],
+                                    "cta": {
+                                      "title": "Prêt à lancer votre carrière en mécanique automobile ?",
+                                      "description": "Inscrivez-vous dès maintenant à notre formation complète et développez des compétences recherchées dans le secteur automobile.",
+                                      "buttonText": "S'inscrire maintenant"
+                                    },
+                                    "datap": {
+                                      "mecaniqueFormation": {
+                                        "title": "Formation en Mécanique Automobile",
+                                        "description": "Notre formation en mécanique automobile vous prépare à maîtriser tous les aspects techniques des véhicules modernes, des systèmes mécaniques aux composants électroniques. et quelque truc",
+                                        "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+                                        "programStructure": [
+                                          "Formation théorique approfondie",
+                                          "Formation pratique en atelier",
+                                          "Stage en entreprise",
+                                          "Évaluation continue des compétences"
+                                        ],
+                                        "courseContent": [
+                                          "Fondements de la mécanique automobile",
+                                          "Systèmes de moteur et transmission",
+                                          "Systèmes électriques et électroniques",
+                                          "Systèmes de suspension et direction"
+                                        ],
+                                        "careerOpportunities": [
+                                          "Mécanicien automobile",
+                                          "Technicien de maintenance",
+                                          "Conseiller technique",
+                                          "Entrepreneur automobile"
+                                        ],
+                                        "workshopTitle": "Nos ateliers de formation",
+                                        "workshopDescription": "Découvrez nos installations modernes où vous développerez vos compétences pratiques.",
+                                        "workshopImages": [
+                                          "/rachef-uploads/4d1116a5-d93c-42d7-a4e7-568b80e93ecc.png",
+                                          "/rachef-uploads/cfd6266e-c762-4c08-a44a-0a65f5e8c1b4.png",
+                                          "/rachef-uploads/b5a072e9-93d8-4e0c-8a13-a43d1bdf8f03.png"
+                                        ],
+                                        "cta": {
+                                          "title": "Prêt à lancer votre carrière en mécanique automobile ?",
+                                          "description": "Inscrivez-vous dès maintenant à notre formation complète et développez des compétences recherchées dans le secteur automobile.",
+                                          "buttonText": "S'inscrire maintenant"
+                                        },
+                                        "datap": {
+                                          "mecaniqueFormation": {
+                                            "title": "Formation en Mécanique Automobile",
+                                            "description": "Notre formation en mécanique automobile vous prépare à maîtriser tous les aspects techniques des véhicules modernes, des systèmes mécaniques aux composants électroniques. et quelque tru",
+                                            "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+                                            "programStructure": [
+                                              "Formation théorique approfondie",
+                                              "Formation pratique en atelier",
+                                              "Stage en entreprise",
+                                              "Évaluation continue des compétences"
+                                            ],
+                                            "courseContent": [
+                                              "Fondements de la mécanique automobile",
+                                              "Systèmes de moteur et transmission",
+                                              "Systèmes électriques et électroniques",
+                                              "Systèmes de suspension et direction"
+                                            ],
+                                            "careerOpportunities": [
+                                              "Mécanicien automobile",
+                                              "Technicien de maintenance",
+                                              "Conseiller technique",
+                                              "Entrepreneur automobile"
+                                            ],
+                                            "workshopTitle": "Nos ateliers de formation",
+                                            "workshopDescription": "Découvrez nos installations modernes où vous développerez vos compétences pratiques.",
+                                            "workshopImages": [
+                                              "/rachef-uploads/4d1116a5-d93c-42d7-a4e7-568b80e93ecc.png",
+                                              "/rachef-uploads/cfd6266e-c762-4c08-a44a-0a65f5e8c1b4.png",
+                                              "/rachef-uploads/b5a072e9-93d8-4e0c-8a13-a43d1bdf8f03.png"
+                                            ],
+                                            "cta": {
+                                              "title": "Prêt à lancer votre carrière en mécanique automobile ?",
+                                              "description": "Inscrivez-vous dès maintenant à notre formation complète et développez des compétences recherchées dans le secteur automobile.",
+                                              "buttonText": "S'inscrire maintenant"
+                                            },
+                                            "datap": {
+                                              "mecaniqueFormation": {
+                                                "title": "Formation en Mécanique Automobile",
+                                                "description": "Notre formation en mécanique automobile vous prépare à maîtriser tous les aspects techniques des véhicules modernes, des systèmes mécaniques aux composants électroniques. et quelque tr",
+                                                "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+                                                "programStructure": [
+                                                  "Formation théorique approfondie",
+                                                  "Formation pratique en atelier",
+                                                  "Stage en entreprise",
+                                                  "Évaluation continue des compétences"
+                                                ],
+                                                "courseContent": [
+                                                  "Fondements de la mécanique automobile",
+                                                  "Systèmes de moteur et transmission",
+                                                  "Systèmes électriques et électroniques",
+                                                  "Systèmes de suspension et direction"
+                                                ],
+                                                "careerOpportunities": [
+                                                  "Mécanicien automobile",
+                                                  "Technicien de maintenance",
+                                                  "Conseiller technique",
+                                                  "Entrepreneur automobile"
+                                                ],
+                                                "workshopTitle": "Nos ateliers de formation",
+                                                "workshopDescription": "Découvrez nos installations modernes où vous développerez vos compétences pratiques.",
+                                                "workshopImages": [
+                                                  "/rachef-uploads/4d1116a5-d93c-42d7-a4e7-568b80e93ecc.png",
+                                                  "/rachef-uploads/cfd6266e-c762-4c08-a44a-0a65f5e8c1b4.png",
+                                                  "/rachef-uploads/b5a072e9-93d8-4e0c-8a13-a43d1bdf8f03.png"
+                                                ],
+                                                "cta": {
+                                                  "title": "Prêt à lancer votre carrière en mécanique automobile ?",
+                                                  "description": "Inscrivez-vous dès maintenant à notre formation complète et développez des compétences recherchées dans le secteur automobile.",
+                                                  "buttonText": "S'inscrire maintenant"
+                                                },
+                                                "datap": {
+                                                  "mecaniqueFormation": {
+                                                    "title": "Formation en Mécanique Automobile",
+                                                    "description": "Notre formation en mécanique automobile vous prépare à maîtriser tous les aspects techniques des véhicules modernes, des systèmes mécaniques aux composants électroniques. et quelque t",
+                                                    "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+                                                    "programStructure": [
+                                                      "Formation théorique approfondie",
+                                                      "Formation pratique en atelier",
+                                                      "Stage en entreprise",
+                                                      "Évaluation continue des compétences"
+                                                    ],
+                                                    "courseContent": [
+                                                      "Fondements de la mécanique automobile",
+                                                      "Systèmes de moteur et transmission",
+                                                      "Systèmes électriques et électroniques",
+                                                      "Systèmes de suspension et direction"
+                                                    ],
+                                                    "careerOpportunities": [
+                                                      "Mécanicien automobile",
+                                                      "Technicien de maintenance",
+                                                      "Conseiller technique",
+                                                      "Entrepreneur automobile"
+                                                    ],
+                                                    "workshopTitle": "Nos ateliers de formation",
+                                                    "workshopDescription": "Découvrez nos installations modernes où vous développerez vos compétences pratiques.",
+                                                    "workshopImages": [
+                                                      "/rachef-uploads/4d1116a5-d93c-42d7-a4e7-568b80e93ecc.png",
+                                                      "/rachef-uploads/cfd6266e-c762-4c08-a44a-0a65f5e8c1b4.png",
+                                                      "/rachef-uploads/b5a072e9-93d8-4e0c-8a13-a43d1bdf8f03.png"
+                                                    ],
+                                                    "cta": {
+                                                      "title": "Prêt à lancer votre carrière en mécanique automobile ?",
+                                                      "description": "Inscrivez-vous dès maintenant à notre formation complète et développez des compétences recherchées dans le secteur automobile.",
+                                                      "buttonText": "S'inscrire maintenant"
+                                                    },
+                                                    "datap": {
+                                                      "mecaniqueFormation": {
+                                                        "title": "Formation en Mécanique Automobile",
+                                                        "description": "Notre formation en mécanique automobile vous prépare à maîtriser tous les aspects techniques des véhicules modernes, des systèmes mécaniques aux composants électroniques. et quelque&nbsp;",
+                                                        "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+                                                        "programStructure": [
+                                                          "Formation théorique approfondie",
+                                                          "Formation pratique en atelier",
+                                                          "Stage en entreprise",
+                                                          "Évaluation continue des compétences"
+                                                        ],
+                                                        "courseContent": [
+                                                          "Fondements de la mécanique automobile",
+                                                          "Systèmes de moteur et transmission",
+                                                          "Systèmes électriques et électroniques",
+                                                          "Systèmes de suspension et direction"
+                                                        ],
+                                                        "careerOpportunities": [
+                                                          "Mécanicien automobile",
+                                                          "Technicien de maintenance",
+                                                          "Conseiller technique",
+                                                          "Entrepreneur automobile"
+                                                        ],
+                                                        "workshopTitle": "Nos ateliers de formation",
+                                                        "workshopDescription": "Découvrez nos installations modernes où vous développerez vos compétences pratiques.",
+                                                        "workshopImages": [
+                                                          "/rachef-uploads/4d1116a5-d93c-42d7-a4e7-568b80e93ecc.png",
+                                                          "/rachef-uploads/cfd6266e-c762-4c08-a44a-0a65f5e8c1b4.png",
+                                                          "/rachef-uploads/b5a072e9-93d8-4e0c-8a13-a43d1bdf8f03.png"
+                                                        ],
+                                                        "cta": {
+                                                          "title": "Prêt à lancer votre carrière en mécanique automobile ?",
+                                                          "description": "Inscrivez-vous dès maintenant à notre formation complète et développez des compétences recherchées dans le secteur automobile.",
+                                                          "buttonText": "S'inscrire maintenant"
+                                                        },
+                                                        "datap": {
+                                                          "mecaniqueFormation": {
+                                                            "title": "Formation en Mécanique Automobile",
+                                                            "description": "Notre formation en mécanique automobile vous prépare à maîtriser tous les aspects techniques des véhicules modernes, des systèmes mécaniques aux composants électroniques. et quelque",
+                                                            "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+                                                            "programStructure": [
+                                                              "Formation théorique approfondie",
+                                                              "Formation pratique en atelier",
+                                                              "Stage en entreprise",
+                                                              "Évaluation continue des compétences"
+                                                            ],
+                                                            "courseContent": [
+                                                              "Fondements de la mécanique automobile",
+                                                              "Systèmes de moteur et transmission",
+                                                              "Systèmes électriques et électroniques",
+                                                              "Systèmes de suspension et direction"
+                                                            ],
+                                                            "careerOpportunities": [
+                                                              "Mécanicien automobile",
+                                                              "Technicien de maintenance",
+                                                              "Conseiller technique",
+                                                              "Entrepreneur automobile"
+                                                            ],
+                                                            "workshopTitle": "Nos ateliers de formation",
+                                                            "workshopDescription": "Découvrez nos installations modernes où vous développerez vos compétences pratiques.",
+                                                            "workshopImages": [
+                                                              "/rachef-uploads/4d1116a5-d93c-42d7-a4e7-568b80e93ecc.png",
+                                                              "/rachef-uploads/cfd6266e-c762-4c08-a44a-0a65f5e8c1b4.png",
+                                                              "/rachef-uploads/b5a072e9-93d8-4e0c-8a13-a43d1bdf8f03.png"
+                                                            ],
+                                                            "cta": {
+                                                              "title": "Prêt à lancer votre carrière en mécanique automobile ?",
+                                                              "description": "Inscrivez-vous dès maintenant à notre formation complète et développez des compétences recherchées dans le secteur automobile.",
+                                                              "buttonText": "S'inscrire maintenant"
+                                                            },
+                                                            "datap": {
+                                                              "mecaniqueFormation": {
+                                                                "title": "Formation en Mécanique Automobile",
+                                                                "description": "Notre formation en mécanique automobile vous prépare à maîtriser tous les aspects techniques des véhicules modernes, des systèmes mécaniques aux composants électroniques. et quelqu",
+                                                                "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+                                                                "programStructure": [
+                                                                  "Formation théorique approfondie",
+                                                                  "Formation pratique en atelier",
+                                                                  "Stage en entreprise",
+                                                                  "Évaluation continue des compétences"
+                                                                ],
+                                                                "courseContent": [
+                                                                  "Fondements de la mécanique automobile",
+                                                                  "Systèmes de moteur et transmission",
+                                                                  "Systèmes électriques et électroniques",
+                                                                  "Systèmes de suspension et direction"
+                                                                ],
+                                                                "careerOpportunities": [
+                                                                  "Mécanicien automobile",
+                                                                  "Technicien de maintenance",
+                                                                  "Conseiller technique",
+                                                                  "Entrepreneur automobile"
+                                                                ],
+                                                                "workshopTitle": "Nos ateliers de formation",
+                                                                "workshopDescription": "Découvrez nos installations modernes où vous développerez vos compétences pratiques.",
+                                                                "workshopImages": [
+                                                                  "/rachef-uploads/4d1116a5-d93c-42d7-a4e7-568b80e93ecc.png",
+                                                                  "/rachef-uploads/cfd6266e-c762-4c08-a44a-0a65f5e8c1b4.png",
+                                                                  "/rachef-uploads/b5a072e9-93d8-4e0c-8a13-a43d1bdf8f03.png"
+                                                                ],
+                                                                "cta": {
+                                                                  "title": "Prêt à lancer votre carrière en mécanique automobile ?",
+                                                                  "description": "Inscrivez-vous dès maintenant à notre formation complète et développez des compétences recherchées dans le secteur automobile.",
+                                                                  "buttonText": "S'inscrire maintenant"
+                                                                },
+                                                                "datap": {
+                                                                  "mecaniqueFormation": {
+                                                                    "title": "Formation en Mécanique Automobile",
+                                                                    "description": "Notre formation en mécanique automobile vous prépare à maîtriser tous les aspects techniques des véhicules modernes, des systèmes mécaniques aux composants électroniques. et quelq",
+                                                                    "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+                                                                    "programStructure": [
+                                                                      "Formation théorique approfondie",
+                                                                      "Formation pratique en atelier",
+                                                                      "Stage en entreprise",
+                                                                      "Évaluation continue des compétences"
+                                                                    ],
+                                                                    "courseContent": [
+                                                                      "Fondements de la mécanique automobile",
+                                                                      "Systèmes de moteur et transmission",
+                                                                      "Systèmes électriques et électroniques",
+                                                                      "Systèmes de suspension et direction"
+                                                                    ],
+                                                                    "careerOpportunities": [
+                                                                      "Mécanicien automobile",
+                                                                      "Technicien de maintenance",
+                                                                      "Conseiller technique",
+                                                                      "Entrepreneur automobile"
+                                                                    ],
+                                                                    "workshopTitle": "Nos ateliers de formation",
+                                                                    "workshopDescription": "Découvrez nos installations modernes où vous développerez vos compétences pratiques.",
+                                                                    "workshopImages": [
+                                                                      "/rachef-uploads/4d1116a5-d93c-42d7-a4e7-568b80e93ecc.png",
+                                                                      "/rachef-uploads/cfd6266e-c762-4c08-a44a-0a65f5e8c1b4.png",
+                                                                      "/rachef-uploads/b5a072e9-93d8-4e0c-8a13-a43d1bdf8f03.png"
+                                                                    ],
+                                                                    "cta": {
+                                                                      "title": "Prêt à lancer votre carrière en mécanique automobile ?",
+                                                                      "description": "Inscrivez-vous dès maintenant à notre formation complète et développez des compétences recherchées dans le secteur automobile.",
+                                                                      "buttonText": "S'inscrire maintenant"
+                                                                    },
+                                                                    "datap": {
+                                                                      "mecaniqueFormation": {
+                                                                        "title": "Formation en Mécanique Automobile",
+                                                                        "description": "Notre formation en mécanique automobile vous prépare à maîtriser tous les aspects techniques des véhicules modernes, des systèmes mécaniques aux composants électroniques. et quel",
+                                                                        "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+                                                                        "programStructure": [
+                                                                          "Formation théorique approfondie",
+                                                                          "Formation pratique en atelier",
+                                                                          "Stage en entreprise",
+                                                                          "Évaluation continue des compétences"
+                                                                        ],
+                                                                        "courseContent": [
+                                                                          "Fondements de la mécanique automobile",
+                                                                          "Systèmes de moteur et transmission",
+                                                                          "Systèmes électriques et électroniques",
+                                                                          "Systèmes de suspension et direction"
+                                                                        ],
+                                                                        "careerOpportunities": [
+                                                                          "Mécanicien automobile",
+                                                                          "Technicien de maintenance",
+                                                                          "Conseiller technique",
+                                                                          "Entrepreneur automobile"
+                                                                        ],
+                                                                        "workshopTitle": "Nos ateliers de formation",
+                                                                        "workshopDescription": "Découvrez nos installations modernes où vous développerez vos compétences pratiques.",
+                                                                        "workshopImages": [
+                                                                          "/rachef-uploads/4d1116a5-d93c-42d7-a4e7-568b80e93ecc.png",
+                                                                          "/rachef-uploads/cfd6266e-c762-4c08-a44a-0a65f5e8c1b4.png",
+                                                                          "/rachef-uploads/b5a072e9-93d8-4e0c-8a13-a43d1bdf8f03.png"
+                                                                        ],
+                                                                        "cta": {
+                                                                          "title": "Prêt à lancer votre carrière en mécanique automobile ?",
+                                                                          "description": "Inscrivez-vous dès maintenant à notre formation complète et développez des compétences recherchées dans le secteur automobile.",
+                                                                          "buttonText": "S'inscrire maintenant"
+                                                                        },
+                                                                        "datap": {
+                                                                          "mecaniqueFormation": {
+                                                                            "title": "Formation en Mécanique Automobile",
+                                                                            "description": "Notre formation en mécanique automobile vous prépare à maîtriser tous les aspects techniques des véhicules modernes, des systèmes mécaniques aux composants électroniques. et que",
+                                                                            "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+                                                                            "programStructure": [
+                                                                              "Formation théorique approfondie",
+                                                                              "Formation pratique en atelier",
+                                                                              "Stage en entreprise",
+                                                                              "Évaluation continue des compétences"
+                                                                            ],
+                                                                            "courseContent": [
+                                                                              "Fondements de la mécanique automobile",
+                                                                              "Systèmes de moteur et transmission",
+                                                                              "Systèmes électriques et électroniques",
+                                                                              "Systèmes de suspension et direction"
+                                                                            ],
+                                                                            "careerOpportunities": [
+                                                                              "Mécanicien automobile",
+                                                                              "Technicien de maintenance",
+                                                                              "Conseiller technique",
+                                                                              "Entrepreneur automobile"
+                                                                            ],
+                                                                            "workshopTitle": "Nos ateliers de formation",
+                                                                            "workshopDescription": "Découvrez nos installations modernes où vous développerez vos compétences pratiques.",
+                                                                            "workshopImages": [
+                                                                              "/rachef-uploads/4d1116a5-d93c-42d7-a4e7-568b80e93ecc.png",
+                                                                              "/rachef-uploads/cfd6266e-c762-4c08-a44a-0a65f5e8c1b4.png",
+                                                                              "/rachef-uploads/b5a072e9-93d8-4e0c-8a13-a43d1bdf8f03.png"
+                                                                            ],
+                                                                            "cta": {
+                                                                              "title": "Prêt à lancer votre carrière en mécanique automobile ?",
+                                                                              "description": "Inscrivez-vous dès maintenant à notre formation complète et développez des compétences recherchées dans le secteur automobile.",
+                                                                              "buttonText": "S'inscrire maintenant"
+                                                                            },
+                                                                            "datap": {
+                                                                              "mecaniqueFormation": {
+                                                                                "title": "Formation en Mécanique Automobile",
+                                                                                "description": "Notre formation en mécanique automobile vous prépare à maîtriser tous les aspects techniques des véhicules modernes, des systèmes mécaniques aux composants électroniques. et qu",
+                                                                                "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+                                                                                "programStructure": [
+                                                                                  "Formation théorique approfondie",
+                                                                                  "Formation pratique en atelier",
+                                                                                  "Stage en entreprise",
+                                                                                  "Évaluation continue des compétences"
+                                                                                ],
+                                                                                "courseContent": [
+                                                                                  "Fondements de la mécanique automobile",
+                                                                                  "Systèmes de moteur et transmission",
+                                                                                  "Systèmes électriques et électroniques",
+                                                                                  "Systèmes de suspension et direction"
+                                                                                ],
+                                                                                "careerOpportunities": [
+                                                                                  "Mécanicien automobile",
+                                                                                  "Technicien de maintenance",
+                                                                                  "Conseiller technique",
+                                                                                  "Entrepreneur automobile"
+                                                                                ],
+                                                                                "workshopTitle": "Nos ateliers de formation",
+                                                                                "workshopDescription": "Découvrez nos installations modernes où vous développerez vos compétences pratiques.",
+                                                                                "workshopImages": [
+                                                                                  "/rachef-uploads/4d1116a5-d93c-42d7-a4e7-568b80e93ecc.png",
+                                                                                  "/rachef-uploads/cfd6266e-c762-4c08-a44a-0a65f5e8c1b4.png",
+                                                                                  "/rachef-uploads/b5a072e9-93d8-4e0c-8a13-a43d1bdf8f03.png"
+                                                                                ],
+                                                                                "cta": {
+                                                                                  "title": "Prêt à lancer votre carrière en mécanique automobile ?",
+                                                                                  "description": "Inscrivez-vous dès maintenant à notre formation complète et développez des compétences recherchées dans le secteur automobile.",
+                                                                                  "buttonText": "S'inscrire maintenant"
+                                                                                },
+                                                                                "datap": {
+                                                                                  "mecaniqueFormation": {
+                                                                                    "title": "Formation en Mécanique Automobile",
+                                                                                    "description": "Notre formation en mécanique automobile vous prépare à maîtriser tous les aspects techniques des véhicules modernes, des systèmes mécaniques aux composants électroniques. et q",
+                                                                                    "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+                                                                                    "programStructure": [
+                                                                                      "Formation théorique approfondie",
+                                                                                      "Formation pratique en atelier",
+                                                                                      "Stage en entreprise",
+                                                                                      "Évaluation continue des compétences"
+                                                                                    ],
+                                                                                    "courseContent": [
+                                                                                      "Fondements de la mécanique automobile",
+                                                                                      "Systèmes de moteur et transmission",
+                                                                                      "Systèmes électriques et électroniques",
+                                                                                      "Systèmes de suspension et direction"
+                                                                                    ],
+                                                                                    "careerOpportunities": [
+                                                                                      "Mécanicien automobile",
+                                                                                      "Technicien de maintenance",
+                                                                                      "Conseiller technique",
+                                                                                      "Entrepreneur automobile"
+                                                                                    ],
+                                                                                    "workshopTitle": "Nos ateliers de formation",
+                                                                                    "workshopDescription": "Découvrez nos installations modernes où vous développerez vos compétences pratiques.",
+                                                                                    "workshopImages": [
+                                                                                      "/rachef-uploads/4d1116a5-d93c-42d7-a4e7-568b80e93ecc.png",
+                                                                                      "/rachef-uploads/cfd6266e-c762-4c08-a44a-0a65f5e8c1b4.png",
+                                                                                      "/rachef-uploads/b5a072e9-93d8-4e0c-8a13-a43d1bdf8f03.png"
+                                                                                    ],
+                                                                                    "cta": {
+                                                                                      "title": "Prêt à lancer votre carrière en mécanique automobile ?",
+                                                                                      "description": "Inscrivez-vous dès maintenant à notre formation complète et développez des compétences recherchées dans le secteur automobile.",
+                                                                                      "buttonText": "S'inscrire maintenant"
+                                                                                    },
+                                                                                    "datap": {
+                                                                                      "mecaniqueFormation": {
+                                                                                        "title": "Formation en Mécanique Automobile",
+                                                                                        "description": "Notre formation en mécanique automobile vous prépare à maîtriser tous les aspects techniques des véhicules modernes, des systèmes mécaniques aux composants électroniques. et&nbsp;",
+                                                                                        "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+                                                                                        "programStructure": [
+                                                                                          "Formation théorique approfondie",
+                                                                                          "Formation pratique en atelier",
+                                                                                          "Stage en entreprise",
+                                                                                          "Évaluation continue des compétences"
+                                                                                        ],
+                                                                                        "courseContent": [
+                                                                                          "Fondements de la mécanique automobile",
+                                                                                          "Systèmes de moteur et transmission",
+                                                                                          "Systèmes électriques et électroniques",
+                                                                                          "Systèmes de suspension et direction"
+                                                                                        ],
+                                                                                        "careerOpportunities": [
+                                                                                          "Mécanicien automobile",
+                                                                                          "Technicien de maintenance",
+                                                                                          "Conseiller technique",
+                                                                                          "Entrepreneur automobile"
+                                                                                        ],
+                                                                                        "workshopTitle": "Nos ateliers de formation",
+                                                                                        "workshopDescription": "Découvrez nos installations modernes où vous développerez vos compétences pratiques.",
+                                                                                        "workshopImages": [
+                                                                                          "/rachef-uploads/4d1116a5-d93c-42d7-a4e7-568b80e93ecc.png",
+                                                                                          "/rachef-uploads/cfd6266e-c762-4c08-a44a-0a65f5e8c1b4.png",
+                                                                                          "/rachef-uploads/b5a072e9-93d8-4e0c-8a13-a43d1bdf8f03.png"
+                                                                                        ],
+                                                                                        "cta": {
+                                                                                          "title": "Prêt à lancer votre carrière en mécanique automobile ?",
+                                                                                          "description": "Inscrivez-vous dès maintenant à notre formation complète et développez des compétences recherchées dans le secteur automobile.",
+                                                                                          "buttonText": "S'inscrire maintenant"
+                                                                                        },
+                                                                                        "datap": {
+                                                                                          "mecaniqueFormation": {
+                                                                                            "title": "Formation en Mécanique Automobile",
+                                                                                            "description": "Notre formation en mécanique automobile vous prépare à maîtriser tous les aspects techniques des véhicules modernes, des systèmes mécaniques aux composants électroniques. et s",
+                                                                                            "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+                                                                                            "programStructure": [
+                                                                                              "Formation théorique approfondie",
+                                                                                              "Formation pratique en atelier",
+                                                                                              "Stage en entreprise",
+                                                                                              "Évaluation continue des compétences"
+                                                                                            ],
+                                                                                            "courseContent": [
+                                                                                              "Fondements de la mécanique automobile",
+                                                                                              "Systèmes de moteur et transmission",
+                                                                                              "Systèmes électriques et électroniques",
+                                                                                              "Systèmes de suspension et direction"
+                                                                                            ],
+                                                                                            "careerOpportunities": [
+                                                                                              "Mécanicien automobile",
+                                                                                              "Technicien de maintenance",
+                                                                                              "Conseiller technique",
+                                                                                              "Entrepreneur automobile"
+                                                                                            ],
+                                                                                            "workshopTitle": "Nos ateliers de formation",
+                                                                                            "workshopDescription": "Découvrez nos installations modernes où vous développerez vos compétences pratiques.",
+                                                                                            "workshopImages": [
+                                                                                              "/rachef-uploads/4d1116a5-d93c-42d7-a4e7-568b80e93ecc.png",
+                                                                                              "/rachef-uploads/cfd6266e-c762-4c08-a44a-0a65f5e8c1b4.png",
+                                                                                              "/rachef-uploads/b5a072e9-93d8-4e0c-8a13-a43d1bdf8f03.png"
+                                                                                            ],
+                                                                                            "cta": {
+                                                                                              "title": "Prêt à lancer votre carrière en mécanique automobile ?",
+                                                                                              "description": "Inscrivez-vous dès maintenant à notre formation complète et développez des compétences recherchées dans le secteur automobile.",
+                                                                                              "buttonText": "S'inscrire maintenant"
+                                                                                            },
+                                                                                            "datap": {
+                                                                                              "mecaniqueFormation": {
+                                                                                                "title": "Formation en Mécanique Automobile",
+                                                                                                "description": "Notre formation en mécanique automobile vous prépare à maîtriser tous les aspects techniques des véhicules modernes, des systèmes mécaniques aux composants électroniques. et sq",
+                                                                                                "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+                                                                                                "programStructure": [
+                                                                                                  "Formation théorique approfondie",
+                                                                                                  "Formation pratique en atelier",
+                                                                                                  "Stage en entreprise",
+                                                                                                  "Évaluation continue des compétences"
+                                                                                                ],
+                                                                                                "courseContent": [
+                                                                                                  "Fondements de la mécanique automobile",
+                                                                                                  "Systèmes de moteur et transmission",
+                                                                                                  "Systèmes électriques et électroniques",
+                                                                                                  "Systèmes de suspension et direction"
+                                                                                                ],
+                                                                                                "careerOpportunities": [
+                                                                                                  "Mécanicien automobile",
+                                                                                                  "Technicien de maintenance",
+                                                                                                  "Conseiller technique",
+                                                                                                  "Entrepreneur automobile"
+                                                                                                ],
+                                                                                                "workshopTitle": "Nos ateliers de formation",
+                                                                                                "workshopDescription": "Découvrez nos installations modernes où vous développerez vos compétences pratiques.",
+                                                                                                "workshopImages": [
+                                                                                                  "/rachef-uploads/4d1116a5-d93c-42d7-a4e7-568b80e93ecc.png",
+                                                                                                  "/rachef-uploads/cfd6266e-c762-4c08-a44a-0a65f5e8c1b4.png",
+                                                                                                  "/rachef-uploads/b5a072e9-93d8-4e0c-8a13-a43d1bdf8f03.png"
+                                                                                                ],
+                                                                                                "cta": {
+                                                                                                  "title": "Prêt à lancer votre carrière en mécanique automobile ?",
+                                                                                                  "description": "Inscrivez-vous dès maintenant à notre formation complète et développez des compétences recherchées dans le secteur automobile.",
+                                                                                                  "buttonText": "S'inscrire maintenant"
+                                                                                                },
+                                                                                                "datap": {
+                                                                                                  "mecaniqueFormation": {
+                                                                                                    "title": "Formation en Mécanique Automobile",
+                                                                                                    "description": "Notre formation en mécanique automobile vous prépare à maîtriser tous les aspects techniques des véhicules modernes, des systèmes mécaniques aux composants électroniques. et sqy",
+                                                                                                    "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+                                                                                                    "programStructure": [
+                                                                                                      "Formation théorique approfondie",
+                                                                                                      "Formation pratique en atelier",
+                                                                                                      "Stage en entreprise",
+                                                                                                      "Évaluation continue des compétences"
+                                                                                                    ],
+                                                                                                    "courseContent": [
+                                                                                                      "Fondements de la mécanique automobile",
+                                                                                                      "Systèmes de moteur et transmission",
+                                                                                                      "Systèmes électriques et électroniques",
+                                                                                                      "Systèmes de suspension et direction"
+                                                                                                    ],
+                                                                                                    "careerOpportunities": [
+                                                                                                      "Mécanicien automobile",
+                                                                                                      "Technicien de maintenance",
+                                                                                                      "Conseiller technique",
+                                                                                                      "Entrepreneur automobile"
+                                                                                                    ],
+                                                                                                    "workshopTitle": "Nos ateliers de formation",
+                                                                                                    "workshopDescription": "Découvrez nos installations modernes où vous développerez vos compétences pratiques.",
+                                                                                                    "workshopImages": [
+                                                                                                      "/rachef-uploads/4d1116a5-d93c-42d7-a4e7-568b80e93ecc.png",
+                                                                                                      "/rachef-uploads/cfd6266e-c762-4c08-a44a-0a65f5e8c1b4.png",
+                                                                                                      "/rachef-uploads/b5a072e9-93d8-4e0c-8a13-a43d1bdf8f03.png"
+                                                                                                    ],
+                                                                                                    "cta": {
+                                                                                                      "title": "Prêt à lancer votre carrière en mécanique automobile ?",
+                                                                                                      "description": "Inscrivez-vous dès maintenant à notre formation complète et développez des compétences recherchées dans le secteur automobile.",
+                                                                                                      "buttonText": "S'inscrire maintenant"
+                                                                                                    },
+                                                                                                    "datap": {
+                                                                                                      "mecaniqueFormation": {
+                                                                                                        "title": "Formation en Mécanique Automobile",
+                                                                                                        "description": "Notre formation en mécanique automobile vous prépare à maîtriser tous les aspects techniques des véhicules modernes, des systèmes mécaniques aux composants électroniques. et sqyy",
+                                                                                                        "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+                                                                                                        "programStructure": [
+                                                                                                          "Formation théorique approfondie",
+                                                                                                          "Formation pratique en atelier",
+                                                                                                          "Stage en entreprise",
+                                                                                                          "Évaluation continue des compétences"
+                                                                                                        ],
+                                                                                                        "courseContent": [
+                                                                                                          "Fondements de la mécanique automobile",
+                                                                                                          "Systèmes de moteur et transmission",
+                                                                                                          "Systèmes électriques et électroniques",
+                                                                                                          "Systèmes de suspension et direction"
+                                                                                                        ],
+                                                                                                        "careerOpportunities": [
+                                                                                                          "Mécanicien automobile",
+                                                                                                          "Technicien de maintenance",
+                                                                                                          "Conseiller technique",
+                                                                                                          "Entrepreneur automobile"
+                                                                                                        ],
+                                                                                                        "workshopTitle": "Nos ateliers de formation",
+                                                                                                        "workshopDescription": "Découvrez nos installations modernes où vous développerez vos compétences pratiques.",
+                                                                                                        "workshopImages": [
+                                                                                                          "/rachef-uploads/4d1116a5-d93c-42d7-a4e7-568b80e93ecc.png",
+                                                                                                          "/rachef-uploads/cfd6266e-c762-4c08-a44a-0a65f5e8c1b4.png",
+                                                                                                          "/rachef-uploads/b5a072e9-93d8-4e0c-8a13-a43d1bdf8f03.png"
+                                                                                                        ],
+                                                                                                        "cta": {
+                                                                                                          "title": "Prêt à lancer votre carrière en mécanique automobile ?",
+                                                                                                          "description": "Inscrivez-vous dès maintenant à notre formation complète et développez des compétences recherchées dans le secteur automobile.",
+                                                                                                          "buttonText": "S'inscrire maintenant"
+                                                                                                        },
+                                                                                                        "datap": {
+                                                                                                          "mecaniqueFormation": {
+                                                                                                            "title": "Formation en Mécanique Automobile",
+                                                                                                            "description": "Notre formation en mécanique automobile vous prépare à maîtriser tous les aspects techniques des véhicules modernes, des systèmes mécaniques aux composants électroniques. et sqy",
+                                                                                                            "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+                                                                                                            "programStructure": [
+                                                                                                              "Formation théorique approfondie",
+                                                                                                              "Formation pratique en atelier",
+                                                                                                              "Stage en entreprise",
+                                                                                                              "Évaluation continue des compétences"
+                                                                                                            ],
+                                                                                                            "courseContent": [
+                                                                                                              "Fondements de la mécanique automobile",
+                                                                                                              "Systèmes de moteur et transmission",
+                                                                                                              "Systèmes électriques et électroniques",
+                                                                                                              "Systèmes de suspension et direction"
+                                                                                                            ],
+                                                                                                            "careerOpportunities": [
+                                                                                                              "Mécanicien automobile",
+                                                                                                              "Technicien de maintenance",
+                                                                                                              "Conseiller technique",
+                                                                                                              "Entrepreneur automobile"
+                                                                                                            ],
+                                                                                                            "workshopTitle": "Nos ateliers de formation",
+                                                                                                            "workshopDescription": "Découvrez nos installations modernes où vous développerez vos compétences pratiques.",
+                                                                                                            "workshopImages": [
+                                                                                                              "/rachef-uploads/4d1116a5-d93c-42d7-a4e7-568b80e93ecc.png",
+                                                                                                              "/rachef-uploads/cfd6266e-c762-4c08-a44a-0a65f5e8c1b4.png",
+                                                                                                              "/rachef-uploads/b5a072e9-93d8-4e0c-8a13-a43d1bdf8f03.png"
+                                                                                                            ],
+                                                                                                            "cta": {
+                                                                                                              "title": "Prêt à lancer votre carrière en mécanique automobile ?",
+                                                                                                              "description": "Inscrivez-vous dès maintenant à notre formation complète et développez des compétences recherchées dans le secteur automobile.",
+                                                                                                              "buttonText": "S'inscrire maintenant"
+                                                                                                            },
+                                                                                                            "datap": {
+                                                                                                              "mecaniqueFormation": {
+                                                                                                                "title": "Formation en Mécanique Automobile",
+                                                                                                                "description": "Notre formation en mécanique automobile vous prépare à maîtriser tous les aspects techniques des véhicules modernes, des systèmes mécaniques aux composants électroniques. et sq",
+                                                                                                                "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+                                                                                                                "programStructure": [
+                                                                                                                  "Formation théorique approfondie",
+                                                                                                                  "Formation pratique en atelier",
+                                                                                                                  "Stage en entreprise",
+                                                                                                                  "Évaluation continue des compétences"
+                                                                                                                ],
+                                                                                                                "courseContent": [
+                                                                                                                  "Fondements de la mécanique automobile",
+                                                                                                                  "Systèmes de moteur et transmission",
+                                                                                                                  "Systèmes électriques et électroniques",
+                                                                                                                  "Systèmes de suspension et direction"
+                                                                                                                ],
+                                                                                                                "careerOpportunities": [
+                                                                                                                  "Mécanicien automobile",
+                                                                                                                  "Technicien de maintenance",
+                                                                                                                  "Conseiller technique",
+                                                                                                                  "Entrepreneur automobile"
+                                                                                                                ],
+                                                                                                                "workshopTitle": "Nos ateliers de formation",
+                                                                                                                "workshopDescription": "Découvrez nos installations modernes où vous développerez vos compétences pratiques.",
+                                                                                                                "workshopImages": [
+                                                                                                                  "/rachef-uploads/4d1116a5-d93c-42d7-a4e7-568b80e93ecc.png",
+                                                                                                                  "/rachef-uploads/cfd6266e-c762-4c08-a44a-0a65f5e8c1b4.png",
+                                                                                                                  "/rachef-uploads/b5a072e9-93d8-4e0c-8a13-a43d1bdf8f03.png"
+                                                                                                                ],
+                                                                                                                "cta": {
+                                                                                                                  "title": "Prêt à lancer votre carrière en mécanique automobile ?",
+                                                                                                                  "description": "Inscrivez-vous dès maintenant à notre formation complète et développez des compétences recherchées dans le secteur automobile.",
+                                                                                                                  "buttonText": "S'inscrire maintenant"
+                                                                                                                },
+                                                                                                                "datap": {
+                                                                                                                  "mecaniqueFormation": {
+                                                                                                                    "title": "Formation en Mécanique Automobile",
+                                                                                                                    "description": "Notre formation en mécanique automobile vous prépare à maîtriser tous les aspects techniques des véhicules modernes, des systèmes mécaniques aux composants électroniques. et s",
+                                                                                                                    "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+                                                                                                                    "programStructure": [
+                                                                                                                      "Formation théorique approfondie",
+                                                                                                                      "Formation pratique en atelier",
+                                                                                                                      "Stage en entreprise",
+                                                                                                                      "Évaluation continue des compétences"
+                                                                                                                    ],
+                                                                                                                    "courseContent": [
+                                                                                                                      "Fondements de la mécanique automobile",
+                                                                                                                      "Systèmes de moteur et transmission",
+                                                                                                                      "Systèmes électriques et électroniques",
+                                                                                                                      "Systèmes de suspension et direction"
+                                                                                                                    ],
+                                                                                                                    "careerOpportunities": [
+                                                                                                                      "Mécanicien automobile",
+                                                                                                                      "Technicien de maintenance",
+                                                                                                                      "Conseiller technique",
+                                                                                                                      "Entrepreneur automobile"
+                                                                                                                    ],
+                                                                                                                    "workshopTitle": "Nos ateliers de formation",
+                                                                                                                    "workshopDescription": "Découvrez nos installations modernes où vous développerez vos compétences pratiques.",
+                                                                                                                    "workshopImages": [
+                                                                                                                      "/rachef-uploads/4d1116a5-d93c-42d7-a4e7-568b80e93ecc.png",
+                                                                                                                      "/rachef-uploads/cfd6266e-c762-4c08-a44a-0a65f5e8c1b4.png",
+                                                                                                                      "/rachef-uploads/b5a072e9-93d8-4e0c-8a13-a43d1bdf8f03.png"
+                                                                                                                    ],
+                                                                                                                    "cta": {
+                                                                                                                      "title": "Prêt à lancer votre carrière en mécanique automobile ?",
+                                                                                                                      "description": "Inscrivez-vous dès maintenant à notre formation complète et développez des compétences recherchées dans le secteur automobile.",
+                                                                                                                      "buttonText": "S'inscrire maintenant"
+                                                                                                                    },
+                                                                                                                    "datap": {
+                                                                                                                      "mecaniqueFormation": {
+                                                                                                                        "title": "Formation en Mécanique Automobile",
+                                                                                                                        "description": "Notre formation en mécanique automobile vous prépare à maîtriser tous les aspects techniques des véhicules modernes, des systèmes mécaniques aux composants électroniques. et&nbsp;",
+                                                                                                                        "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+                                                                                                                        "programStructure": [
+                                                                                                                          "Formation théorique approfondie",
+                                                                                                                          "Formation pratique en atelier",
+                                                                                                                          "Stage en entreprise",
+                                                                                                                          "Évaluation continue des compétences"
+                                                                                                                        ],
+                                                                                                                        "courseContent": [
+                                                                                                                          "Fondements de la mécanique automobile",
+                                                                                                                          "Systèmes de moteur et transmission",
+                                                                                                                          "Systèmes électriques et électroniques",
+                                                                                                                          "Systèmes de suspension et direction"
+                                                                                                                        ],
+                                                                                                                        "careerOpportunities": [
+                                                                                                                          "Mécanicien automobile",
+                                                                                                                          "Technicien de maintenance",
+                                                                                                                          "Conseiller technique",
+                                                                                                                          "Entrepreneur automobile"
+                                                                                                                        ],
+                                                                                                                        "workshopTitle": "Nos ateliers de formation",
+                                                                                                                        "workshopDescription": "Découvrez nos installations modernes où vous développerez vos compétences pratiques.",
+                                                                                                                        "workshopImages": [
+                                                                                                                          "/rachef-uploads/4d1116a5-d93c-42d7-a4e7-568b80e93ecc.png",
+                                                                                                                          "/rachef-uploads/cfd6266e-c762-4c08-a44a-0a65f5e8c1b4.png",
+                                                                                                                          "/rachef-uploads/b5a072e9-93d8-4e0c-8a13-a43d1bdf8f03.png"
+                                                                                                                        ],
+                                                                                                                        "cta": {
+                                                                                                                          "title": "Prêt à lancer votre carrière en mécanique automobile ?",
+                                                                                                                          "description": "Inscrivez-vous dès maintenant à notre formation complète et développez des compétences recherchées dans le secteur automobile.",
+                                                                                                                          "buttonText": "S'inscrire maintenant"
+                                                                                                                        },
+                                                                                                                        "datap": {
+                                                                                                                          "mecaniqueFormation": {
+                                                                                                                            "title": "Formation en Mécanique Automobile",
+                                                                                                                            "description": "Notre formation en mécanique automobile vous prépare à maîtriser tous les aspects techniques des véhicules modernes, des systèmes mécaniques aux composants électroniques. et",
+                                                                                                                            "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+                                                                                                                            "programStructure": [
+                                                                                                                              "Formation théorique approfondie",
+                                                                                                                              "Formation pratique en atelier",
+                                                                                                                              "Stage en entreprise",
+                                                                                                                              "Évaluation continue des compétences"
+                                                                                                                            ],
+                                                                                                                            "courseContent": [
+                                                                                                                              "Fondements de la mécanique automobile",
+                                                                                                                              "Systèmes de moteur et transmission",
+                                                                                                                              "Systèmes électriques et électroniques",
+                                                                                                                              "Systèmes de suspension et direction"
+                                                                                                                            ],
+                                                                                                                            "careerOpportunities": [
+                                                                                                                              "Mécanicien automobile",
+                                                                                                                              "Technicien de maintenance",
+                                                                                                                              "Conseiller technique",
+                                                                                                                              "Entrepreneur automobile"
+                                                                                                                            ],
+                                                                                                                            "workshopTitle": "Nos ateliers de formation",
+                                                                                                                            "workshopDescription": "Découvrez nos installations modernes où vous développerez vos compétences pratiques.",
+                                                                                                                            "workshopImages": [
+                                                                                                                              "/rachef-uploads/4d1116a5-d93c-42d7-a4e7-568b80e93ecc.png",
+                                                                                                                              "/rachef-uploads/cfd6266e-c762-4c08-a44a-0a65f5e8c1b4.png",
+                                                                                                                              "/rachef-uploads/b5a072e9-93d8-4e0c-8a13-a43d1bdf8f03.png"
+                                                                                                                            ],
+                                                                                                                            "cta": {
+                                                                                                                              "title": "Prêt à lancer votre carrière en mécanique automobile ?",
+                                                                                                                              "description": "Inscrivez-vous dès maintenant à notre formation complète et développez des compétences recherchées dans le secteur automobile.",
+                                                                                                                              "buttonText": "S'inscrire maintenant"
+                                                                                                                            },
+                                                                                                                            "datap": {
+                                                                                                                              "mecaniqueFormation": {
+                                                                                                                                "title": "Formation en Mécanique Automobile",
+                                                                                                                                "description": "Notre formation en mécanique automobile vous prépare à maîtriser tous les aspects techniques des véhicules modernes, des systèmes mécaniques aux composants électroniques. e",
+                                                                                                                                "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+                                                                                                                                "programStructure": [
+                                                                                                                                  "Formation théorique approfondie",
+                                                                                                                                  "Formation pratique en atelier",
+                                                                                                                                  "Stage en entreprise",
+                                                                                                                                  "Évaluation continue des compétences"
+                                                                                                                                ],
+                                                                                                                                "courseContent": [
+                                                                                                                                  "Fondements de la mécanique automobile",
+                                                                                                                                  "Systèmes de moteur et transmission",
+                                                                                                                                  "Systèmes électriques et électroniques",
+                                                                                                                                  "Systèmes de suspension et direction"
+                                                                                                                                ],
+                                                                                                                                "careerOpportunities": [
+                                                                                                                                  "Mécanicien automobile",
+                                                                                                                                  "Technicien de maintenance",
+                                                                                                                                  "Conseiller technique",
+                                                                                                                                  "Entrepreneur automobile"
+                                                                                                                                ],
+                                                                                                                                "workshopTitle": "Nos ateliers de formation",
+                                                                                                                                "workshopDescription": "Découvrez nos installations modernes où vous développerez vos compétences pratiques.",
+                                                                                                                                "workshopImages": [
+                                                                                                                                  "/rachef-uploads/4d1116a5-d93c-42d7-a4e7-568b80e93ecc.png",
+                                                                                                                                  "/rachef-uploads/cfd6266e-c762-4c08-a44a-0a65f5e8c1b4.png",
+                                                                                                                                  "/rachef-uploads/b5a072e9-93d8-4e0c-8a13-a43d1bdf8f03.png"
+                                                                                                                                ],
+                                                                                                                                "cta": {
+                                                                                                                                  "title": "Prêt à lancer votre carrière en mécanique automobile ?",
+                                                                                                                                  "description": "Inscrivez-vous dès maintenant à notre formation complète et développez des compétences recherchées dans le secteur automobile.",
+                                                                                                                                  "buttonText": "S'inscrire maintenant"
+                                                                                                                                },
+                                                                                                                                "datap": {
+                                                                                                                                  "mecaniqueFormation": {
+                                                                                                                                    "title": "Formation en Mécanique Automobile",
+                                                                                                                                    "description": "Notre formation en mécanique automobile vous prépare à maîtriser tous les aspects techniques des véhicules modernes, des systèmes mécaniques aux composants électroniques.&nbsp;",
+                                                                                                                                    "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+                                                                                                                                    "programStructure": [
+                                                                                                                                      "Formation théorique approfondie",
+                                                                                                                                      "Formation pratique en atelier",
+                                                                                                                                      "Stage en entreprise",
+                                                                                                                                      "Évaluation continue des compétences"
+                                                                                                                                    ],
+                                                                                                                                    "courseContent": [
+                                                                                                                                      "Fondements de la mécanique automobile",
+                                                                                                                                      "Systèmes de moteur et transmission",
+                                                                                                                                      "Systèmes électriques et électroniques",
+                                                                                                                                      "Systèmes de suspension et direction"
+                                                                                                                                    ],
+                                                                                                                                    "careerOpportunities": [
+                                                                                                                                      "Mécanicien automobile",
+                                                                                                                                      "Technicien de maintenance",
+                                                                                                                                      "Conseiller technique",
+                                                                                                                                      "Entrepreneur automobile"
+                                                                                                                                    ],
+                                                                                                                                    "workshopTitle": "Nos ateliers de formation",
+                                                                                                                                    "workshopDescription": "Découvrez nos installations modernes où vous développerez vos compétences pratiques.",
+                                                                                                                                    "workshopImages": [
+                                                                                                                                      "/rachef-uploads/4d1116a5-d93c-42d7-a4e7-568b80e93ecc.png",
+                                                                                                                                      "/rachef-uploads/cfd6266e-c762-4c08-a44a-0a65f5e8c1b4.png",
+                                                                                                                                      "/rachef-uploads/b5a072e9-93d8-4e0c-8a13-a43d1bdf8f03.png"
+                                                                                                                                    ],
+                                                                                                                                    "cta": {
+                                                                                                                                      "title": "Prêt à lancer votre carrière en mécanique automobile ?",
+                                                                                                                                      "description": "Inscrivez-vous dès maintenant à notre formation complète et développez des compétences recherchées dans le secteur automobile.",
+                                                                                                                                      "buttonText": "S'inscrire maintenant"
+                                                                                                                                    }
+                                                                                                                                  }
+                                                                                                                                }
+                                                                                                                              }
+                                                                                                                            }
+                                                                                                                          }
+                                                                                                                        }
+                                                                                                                      }
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                }
+                                                                                                              }
+                                                                                                            }
+                                                                                                          }
+                                                                                                        }
+                                                                                                      }
+                                                                                                    }
+                                                                                                  }
+                                                                                                }
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "notFound": {
+    "title": "404",
+    "subtitle": "Page non trouvée",
+    "description": "La page que vous recherchez n'existe pas ou a été déplacée.",
+    "buttonText": "Retour à l'accueil"
+  },
+  "rhFormation": {
+    "title": "Formation Ressources Humaines",
+    "description": "Notre formation en gestion des ressources humaines vous permet d'acquérir les compétences essentielles pour gérer efficacement le capital humain.",
+    "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+    "programStructure": [
+      "Formation courte intensive",
+      "60 heures de formation théorique",
+      "40 heures de formation pratique",
+      "Accompagnement personnalisé"
+    ],
+    "courseContent": [
+      "Gestion des ressources humaines",
+      "Développement organisationnel",
+      "Gestion des talents et recrutement",
+      "Droit du travail et administration"
+    ],
+    "careerOpportunities": [
+      "Responsable RH",
+      "Chargé de recrutement",
+      "Gestionnaire de paie",
+      "Consultant en ressources humaines"
+    ],
+    "cta": {
+      "title": "Prêt à développer vos compétences en ressources humaines ?",
+      "description": "Inscrivez-vous dès maintenant à notre formation complète et devenez un professionnel des ressources humaines.",
+      "buttonText": "S'inscrire maintenant"
+    }
+  }
+}
