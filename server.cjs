@@ -8,7 +8,19 @@ const unzipper = require('unzipper');
 const os = require('os');
 
 const app = express();
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
+
+// Sert les fichiers du dossier dist
+app.use(express.static(path.join(__dirname, 'dist')));
+
+// Route catch-all pour SPA React
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+});
+
+app.listen(PORT, () => {
+  console.log(`✅ Serveur lancé sur http://localhost:${PORT}`);
+});
 
 // Middlewares
 app.use(cors());
