@@ -20,7 +20,7 @@ const FormationCatalogue: React.FC<FormationCatalogueProps> = ({
 }) => {
   const { datapJson } = useDashboardStore();
   const [numPages, setNumPages] = useState<number | null>(null);
-  const [pageNumber, setPageNumer] = useState(1);
+  const [pageNumber, setPageNumber] = useState(1);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [scale, setScale] = useState(1.4);
@@ -45,10 +45,10 @@ const FormationCatalogue: React.FC<FormationCatalogueProps> = ({
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'ArrowLeft') {
         e.preventDefault();
-        handlePrev();
+        setPageNumber((p) => Math.max(1, p - 1));
       } else if (e.key === 'ArrowRight') {
         e.preventDefault();
-        handleNext();
+        setPageNumber((p) => (numPages ? Math.min(numPages, p + 1) : p));
       } else if (e.key === '+' || e.key === '=') {
         e.preventDefault();
         setScale(prev => Math.min(prev + 0.1, 2));
@@ -85,9 +85,9 @@ const FormationCatalogue: React.FC<FormationCatalogueProps> = ({
           e.preventDefault();
         }
         if (diffX > 0) {
-          handleNext();
+          setPageNumber((p) => (numPages ? Math.min(numPages, p + 1) : p));
         } else {
-          handlePrev();
+          setPageNumber((p) => Math.max(1, p - 1));
         }
         isDragging = false;
       }
