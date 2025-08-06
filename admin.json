@@ -1,0 +1,69 @@
+{
+  "admins": [
+    {
+      "id": "default-admin",
+      "name": "Administrateur Principal",
+      "pin": "PDw7Ow==",
+      "role": "admin",
+      "permissions": [
+        "edit_hero",
+        "edit_overview",
+        "edit_services",
+        "edit_formations",
+        "edit_facilities",
+        "edit_gallery",
+        "edit_events",
+        "edit_pages",
+        "edit_analytics",
+        "edit_contact",
+        "manage_markets",
+        "manage_contacts",
+        "manage_admins",
+        "view_dashboard",
+        "system_settings",
+        "edit_markets",
+        "file_manager"
+      ],
+      "createdAt": "2025-01-27T10:00:00.000Z",
+      "lastLogin": "2025-07-30T11:06:08.157Z"
+    },
+    {
+      "id": "admin-1753873583262",
+      "name": "Walid",
+      "pin": "ODg3Nw==",
+      "role": "admin",
+      "permissions": [
+        "edit_hero",
+        "edit_overview",
+        "edit_services",
+        "edit_formations",
+        "edit_facilities",
+        "edit_gallery",
+        "edit_events",
+        "edit_pages",
+        "edit_analytics",
+        "edit_contact",
+        "manage_markets",
+        "manage_contacts",
+        "manage_admins",
+        "view_dashboard",
+        "system_settings",
+        "edit_markets",
+        "file_manager"
+      ],
+      "createdAt": "2025-07-30T11:06:23.262Z"
+    },
+    {
+      "id": "gestionnaire-demo",
+      "name": "Gestionnaire ACTL",
+      "pin": "NTg7Mw==",
+      "role": "gestionnaire",
+      "permissions": [
+        "view_dashboard",
+        "manage_markets",
+        "manage_contacts"
+      ],
+      "createdAt": "2025-07-30T12:00:00.000Z"
+    }
+  ]
+}
