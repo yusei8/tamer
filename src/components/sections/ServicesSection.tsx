@@ -1,55 +1,25 @@
-import React, { useState, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Settings, 
-  Plus, 
-  Edit, 
-  Trash2, 
-  Eye,
-  Star,
-  Clock,
-  Users,
-  CheckCircle,
-  AlertCircle
-} from 'lucide-react';
-import { useDashboardStore } from '../../stores/dashboardStore';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Settings } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
-import { Button } from '../ui/button';
-import { Badge } from '../ui/badge';
+import { useDashboardStore } from '../../stores/dashboardStore';
 import { Input } from '../ui/input';
 import { Textarea } from '../ui/textarea';
-import { Label } from '../ui/label';
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '../ui/dialog';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
-import { Switch } from '../ui/switch';
-import toast from 'react-hot-toast';
+import { Button } from '../ui/button';
 import { DragDropContext, Droppable, Draggable, DropResult } from '@hello-pangea/dnd';
+import toast from 'react-hot-toast';
 
-interface Service {
-  id: string;
-  title: string;
-  description: string;
-  icon: string;
-  category: string;
-  duration?: string;
-  price?: string;
-  featured: boolean;
-  active: boolean;
-  createdAt: string;
-  updatedAt: string;
-}
-
-export const ServicesSection: React.FC = () => {
-  const { dataJson, updateField, addItem, removeItem } = useDashboardStore();
-  const services = dataJson.services?.items || [];
-  const fileInputRefs = useRef<(HTMLInputElement | null)[]>([]);
+export const FacilitiesSection: React.FC = () => {
+  const { dataJson, updateField, addItem, removeItem, saveData } = useDashboardStore();
+  const facilities = dataJson.facilities?.items || [];
+  const fileInputRefs = React.useRef<(HTMLInputElement | null)[]>([]);
 
   // Toast pour drag & drop
   React.useEffect(() => {
     toast.success(
       (t) => (
         <div className="flex items-center justify-between">
-          <span>🎯 Fonctionnalité drag & drop activée ! Vous pouvez changer l'ordre des services en sélectionnant une carte puis en la déplaçant vers une autre position.</span>
+          <span>🎯 Fonctionnalité drag & drop activée ! Vous pouvez changer l'ordre des ateliers en sélectionnant une carte puis en la déplaçant vers une autre position.</span>
           <button
             onClick={() => toast.dismiss(t.id)}
             className="ml-4 text-white hover:text-gray-200 font-bold text-lg"
@@ -73,16 +43,18 @@ export const ServicesSection: React.FC = () => {
     );
   }, []);
 
-  const handleImageEdit = (idx: number) => {
-    fileInputRefs.current[idx]?.click();
-  };
-
   const handleDragEnd = (result: DropResult) => {
     if (!result.destination) return;
-    const reordered = Array.from(services);
+    const reordered = Array.from(facilities);
     const [removed] = reordered.splice(result.source.index, 1);
     reordered.splice(result.destination.index, 0, removed);
-    updateField('data', 'services.items', reordered);
+    // Réattribuer les id en fonction du nouvel ordre
+    const renumbered = reordered.map((f, i) => (typeof f === 'object' && f !== null ? { ...f, id: i + 1 } : { id: i + 1 }));
+    updateField('data', 'facilities.items', renumbered);
+  };
+
+  const handleImageEdit = (idx: number) => {
+    fileInputRefs.current[idx]?.click();
   };
 
   return (
@@ -93,32 +65,32 @@ export const ServicesSection: React.FC = () => {
           <Input
             className="text-3xl md:text-4xl font-extrabold text-blue-800 border-none p-0 h-auto focus:ring-0 focus:border-none bg-transparent shadow-none outline-none transition-all duration-150"
             style={{ boxShadow: 'none', outline: 'none' }}
-            value={dataJson.services?.title || ''}
-            onChange={e => updateField('data', 'services.title', e.target.value)}
-            placeholder="Titre de la section services"
+            value={dataJson.facilities?.title || ''}
+            onChange={e => updateField('data', 'facilities.title', e.target.value)}
+            placeholder="Titre de la section ateliers"
           />
         </div>
         <div className="rounded-lg border border-blue-200 bg-blue-50/40 px-4 py-2 transition-all duration-150 focus-within:border-blue-500 hover:border-blue-400">
           <Textarea
             className="text-lg md:text-xl font-medium text-slate-700 border-none p-0 h-auto focus:ring-0 focus:border-none bg-transparent resize-none shadow-none outline-none transition-all duration-150"
             style={{ minHeight: 0, boxShadow: 'none', outline: 'none' }}
-            value={dataJson.services?.description || ''}
-            onChange={e => updateField('data', 'services.description', e.target.value)}
-            placeholder="Description de la section services"
+            value={dataJson.facilities?.description || ''}
+            onChange={e => updateField('data', 'facilities.description', e.target.value)}
+            placeholder="Description de la section ateliers"
             rows={2}
           />
         </div>
       </div>
-      {/* Drag & drop des cartes services */}
+      {/* Drag & drop des cartes ateliers */}
       <DragDropContext onDragEnd={handleDragEnd}>
-        <Droppable droppableId="services-droppable" direction="horizontal">
+        <Droppable droppableId="facilities-droppable" direction="horizontal">
           {(provided) => (
             <div
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
               ref={provided.innerRef}
               {...provided.droppableProps}
             >
-              {services.map((service, idx) => (
+              {facilities.map((facility, idx) => (
                 <Draggable key={idx} draggableId={String(idx)} index={idx}>
                   {(provided, snapshot) => (
                     <div
@@ -130,8 +102,8 @@ export const ServicesSection: React.FC = () => {
                       {/* Image */}
                       <div className="relative">
                         <img
-                          src={service.image || 'https://via.placeholder.com/400x225?text=Image+service'}
-                          alt={service.title}
+                          src={facility.image || 'https://via.placeholder.com/400x225?text=Image+atelier'}
+                          alt={facility.title}
                           className="w-full h-48 object-cover rounded-lg"
                         />
                         <Button
@@ -150,17 +122,29 @@ export const ServicesSection: React.FC = () => {
                           onChange={async e => {
                             const file = e.target.files?.[0];
                             if (!file) return;
-                            const formData = new FormData();
-                            formData.append('file', file, file.name);
-                            const apiUrl = `${window.location.protocol}//${window.location.hostname}:4000/api/upload`;
-                            const res = await fetch(apiUrl, { method: 'POST', body: formData });
-                            if (res.ok) {
-                              const data = await res.json();
-                              const newServices = services.map((s, i) => i === idx ? { ...s, image: `/rachef-uploads/${data.filename}` } : s);
-                              updateField('data', 'services.items', newServices);
-                              toast('N’oublie pas de cliquer sur “Sauvegarder” pour enregistrer l’image !', { icon: '💾', position: 'top-center' });
+                            
+                            try {
+                              const formData = new FormData();
+                              formData.append('file', file, file.name);
+                              const apiUrl = `${window.location.protocol}//${window.location.hostname}:4000/api/upload`;
+                              const res = await fetch(apiUrl, { method: 'POST', body: formData });
+                              
+                              if (res.ok) {
+                                const data = await res.json();
+                                const newFacilities = facilities.map((f, i) => i === idx ? { ...f, image: `/rachef-uploads/${data.filename}` } : f);
+                                updateField('data', 'facilities.items', newFacilities);
+                                
+                                // Sauvegarder automatiquement après l'upload
+                                await saveData();
+                                toast.success('Image de l\'atelier mise à jour et sauvegardée', { position: 'top-center' });
+                              } else {
+                                toast.error("Erreur lors de l'upload de l'image", { position: 'top-center' });
+                              }
+                            } catch (error) {
+                              console.error('Erreur upload:', error);
+                              toast.error("Erreur de connexion lors de l'upload", { position: 'top-center' });
                             }
-                            // Reset input value to allow re-uploading the same file if needed
+                            
                             if (fileInputRefs.current[idx]) fileInputRefs.current[idx]!.value = '';
                           }}
                         />
@@ -170,13 +154,12 @@ export const ServicesSection: React.FC = () => {
                         <Input
                           className="text-lg font-bold text-blue-800 border-none p-0 h-auto focus:ring-0 focus:border-none bg-transparent shadow-none outline-none transition-all duration-150"
                           style={{ boxShadow: 'none', outline: 'none' }}
-                          value={service.title || ''}
+                          value={facility.title || ''}
                           onChange={e => {
-                            const newServices = [...services];
-                            newServices[idx] = { ...newServices[idx], title: e.target.value };
-                            updateField('data', 'services.items', newServices);
+                            const newFacilities = facilities.map((f, i) => i === idx ? { ...f, title: e.target.value } : f);
+                            updateField('data', 'facilities.items', newFacilities);
                           }}
-                          placeholder="Titre du service"
+                          placeholder="Titre de l'atelier"
                         />
                       </div>
                       {/* Description éditable avec cadre */}
@@ -184,22 +167,21 @@ export const ServicesSection: React.FC = () => {
                         <Textarea
                           className="text-base font-medium text-slate-700 border-none p-0 h-auto focus:ring-0 focus:border-none bg-transparent resize-none shadow-none outline-none transition-all duration-150"
                           style={{ minHeight: 0, boxShadow: 'none', outline: 'none' }}
-                          value={service.description || ''}
+                          value={facility.description || ''}
                           onChange={e => {
-                            const newServices = [...services];
-                            newServices[idx] = { ...newServices[idx], description: e.target.value };
-                            updateField('data', 'services.items', newServices);
+                            const newFacilities = facilities.map((f, i) => i === idx ? { ...f, description: e.target.value } : f);
+                            updateField('data', 'facilities.items', newFacilities);
                           }}
-                          placeholder="Description du service"
+                          placeholder="Description de l'atelier"
                           rows={2}
                         />
                       </div>
                       <div className="flex justify-end mt-2">
                         <Button size="sm" variant="ghost" className="text-red-600" onClick={() => {
-                          const newServices = services.filter((_, i) => i !== idx);
-                          updateField('data', 'services.items', newServices);
+                          const newFacilities = facilities.filter((_, i) => i !== idx);
+                          updateField('data', 'facilities.items', newFacilities);
                         }}>
-                          <Trash2 className="w-4 h-4" />
+                          Supprimer
                         </Button>
                       </div>
                     </div>
@@ -207,16 +189,13 @@ export const ServicesSection: React.FC = () => {
                 </Draggable>
               ))}
               {provided.placeholder}
-              {/* Ajout d'un service */}
-              <Card className="flex flex-col items-center justify-center border-dashed border-2 border-emerald-300 bg-emerald-50/30 hover:bg-emerald-100/50 transition-all cursor-pointer min-h-[250px]" onClick={() => {
-                const newServices = [...services, { title: '', description: '', image: '' }];
-                updateField('data', 'services.items', newServices);
+              {/* Ajout d'un atelier */}
+              <div className="flex flex-col items-center justify-center border-dashed border-2 border-emerald-300 bg-emerald-50/30 hover:bg-emerald-100/50 transition-all cursor-pointer min-h-[250px] rounded-xl" onClick={() => {
+                const newFacilities = [...facilities, { id: facilities.length + 1, title: '', description: '', image: '' }];
+                updateField('data', 'facilities.items', newFacilities);
               }}>
-                <div className="flex flex-col items-center justify-center h-full p-8">
-                  <Plus className="w-8 h-8 text-emerald-500 mb-2" />
-                  <span className="text-emerald-700 font-semibold">Ajouter un service</span>
-                </div>
-              </Card>
+                <span className="text-emerald-700 font-semibold">Ajouter un atelier</span>
+              </div>
             </div>
           )}
         </Droppable>
