@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button';
 import { useDashboardStore } from '@/stores/dashboardStore';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Menu, X, Upload } from 'lucide-react';
+import toast from 'react-hot-toast';
+import { uploadImage } from '../../lib/uploadUtils';
 
 export const NavigationSection: React.FC = () => {
   const { datapJson, dataJson, updateField } = useDashboardStore();
@@ -71,21 +73,13 @@ export const NavigationSection: React.FC = () => {
     const file = e.target.files?.[0];
     if (!file) return;
 
-    const formData = new FormData();
-    formData.append('image', file);
-
-    try {
-      const response = await fetch('http://localhost:4000/upload', {
-        method: 'POST',
-        body: formData,
-      });
-
-      if (response.ok) {
-        const result = await response.json();
-        handleChange('logo', result.imageUrl);
-      }
-    } catch (error) {
-      console.error('Erreur lors du téléchargement:', error);
+    const result = await uploadImage(file);
+    
+    if (result.success && result.filename) {
+      handleChange('logo', `/rachef-uploads/${result.filename}`);
+      toast.success('Logo uploadé avec succès !');
+    } else {
+      toast.error(`Erreur upload: ${result.error}`);
     }
   };
 

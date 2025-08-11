@@ -19,6 +19,7 @@ import { Document, Page, pdfjs } from 'react-pdf';
 import { Switch } from '../ui/switch';
 import { DragDropContext, Droppable, Draggable, DropResult } from '@hello-pangea/dnd';
 import { Badge } from '../ui/badge';
+import { usePdfLoader, getPdfJsConfig, detectDownloadManager } from '../../lib/pdfUtils';
 import { FormationPageEditor } from './FormationPageEditor';
 import { FormationTemplateSelector } from './FormationTemplateSelector';
 import { InlineFormationEditor } from './InlineFormationEditor';
@@ -2134,6 +2135,9 @@ const CataloguePreview: React.FC<{ catalogue: any }> = ({ catalogue }) => {
   const [status, setStatus] = useState<'loading' | 'success' | 'error'>('loading');
   const [errorDetails, setErrorDetails] = useState('');
   const containerRef = useRef<HTMLDivElement>(null);
+  
+  // Utiliser notre loader PDF compatible IDM
+  const { pdfUrl, isLoading: isPdfLoading, error: pdfError, reload } = usePdfLoader(catalogue.pdfUrl);
 
   useEffect(() => {
     setPageNumber(1);
@@ -2221,9 +2225,42 @@ const CataloguePreview: React.FC<{ catalogue: any }> = ({ catalogue }) => {
             )}
             <div ref={containerRef} className="flex items-center justify-center w-full py-6">
               <Document
-                file={catalogue.pdfUrl}
-                loading={<div className="text-white/60 text-lg">Préparation du catalogue...</div>}
-                error={<div className="text-red-400 text-center p-8">Erreur d'affichage du PDF</div>}
+                {...getPdfJsConfig(pdfUrl)}
+                loading={
+                  <div className="text-white/60 text-lg text-center">
+                    {isPdfLoading ? "Optimisation anti-IDM..." : "Préparation du catalogue..."}
+                    {detectDownloadManager() && (
+                      <div className="text-sm text-blue-300 mt-2">Mode compatibilité gestionnaire de téléchargement</div>
+                    )}
+                  </div>
+                }
+                error={
+                  <div className="text-center p-8">
+                    <div className="text-red-400 text-lg mb-4">Erreur d'affichage du PDF</div>
+                    {pdfError && <div className="text-red-300 text-sm mb-4">{pdfError}</div>}
+                    {detectDownloadManager() && (
+                      <div className="bg-blue-900/50 border border-blue-500/50 rounded-lg p-4 mb-4">
+                        <div className="text-blue-300 text-sm">
+                          <strong>Gestionnaire de téléchargement détecté</strong><br/>
+                          IDM ou un autre gestionnaire interfère avec l'affichage.
+                        </div>
+                      </div>
+                    )}
+                    <button 
+                      onClick={reload}
+                      className="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg mr-2"
+                    >
+                      Réessayer
+                    </button>
+                    <a 
+                      href={catalogue.pdfUrl} 
+                      download 
+                      className="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-lg"
+                    >
+                      Télécharger
+                    </a>
+                  </div>
+                }
                 onLoadSuccess={({ numPages }) => { setNumPages(numPages); setStatus('success'); }}
                 onLoadError={error => { setStatus('error'); setErrorDetails('Impossible de charger le document PDF'); }}
               >

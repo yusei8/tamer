@@ -179,7 +179,11 @@ export const EventsSection: React.FC = () => {
     if (!file) return;
     const formData = new FormData();
     formData.append('file', file, file.name);
-    const apiUrl = `${window.location.protocol}//${window.location.hostname}:4000/api/upload`;
+    // Détection automatique du port du serveur
+    const serverPort = window.location.port || (window.location.protocol === 'https:' ? '443' : '80');
+    const apiUrl = window.location.port === '3000' || window.location.hostname === 'localhost' 
+      ? `${window.location.protocol}//${window.location.hostname}:4000/api/upload`
+      : `${window.location.protocol}//${window.location.hostname}:${serverPort}/api/upload`;
     const res = await fetch(apiUrl, { method: 'POST', body: formData });
     if (res.ok) {
       const data = await res.json();
@@ -575,7 +579,11 @@ export const EventsSection: React.FC = () => {
                                   if (!file) return;
                                   const formData = new FormData();
                                   formData.append('file', file, file.name);
-                                  const apiUrl = `${window.location.protocol}//${window.location.hostname}:4000/api/upload`;
+                                  // Détection automatique du port du serveur
+                                  const serverPort = window.location.port || (window.location.protocol === 'https:' ? '443' : '80');
+                                  const apiUrl = window.location.port === '3000' || window.location.hostname === 'localhost' 
+                                    ? `${window.location.protocol}//${window.location.hostname}:4000/api/upload`
+                                    : `${window.location.protocol}//${window.location.hostname}:${serverPort}/api/upload`;
                                   const res = await fetch(apiUrl, { method: 'POST', body: formData });
                                   if (res.ok) {
                                     const data = await res.json();

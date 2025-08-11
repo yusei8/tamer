@@ -22,10 +22,9 @@ import { Label } from '../ui/label';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '../ui/dialog';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
 import { Switch } from '../ui/switch';
-import { ProgressBar } from '../ui/progress-bar';
-import { useImageUpload } from '../../hooks/useImageUpload';
 import toast from 'react-hot-toast';
 import { DragDropContext, Droppable, Draggable, DropResult } from '@hello-pangea/dnd';
+import { uploadImage } from '../../lib/uploadUtils';
 
 interface Service {
   id: string;
@@ -42,19 +41,9 @@ interface Service {
 }
 
 export const ServicesSection: React.FC = () => {
-  const { dataJson, updateField, addItem, removeItem, saveData } = useDashboardStore();
+  const { dataJson, updateField, addItem, removeItem } = useDashboardStore();
   const services = dataJson.services?.items || [];
   const fileInputRefs = useRef<(HTMLInputElement | null)[]>([]);
-  
-  // Hook pour l'upload d'images avec progression
-  const { uploadImage, uploadState, cancelUpload } = useImageUpload({
-    onSuccess: async (imageUrl: string) => {
-      // L'URL sera utilisée dans le handler onChange
-    },
-    onError: (error: string) => {
-      console.error('Erreur upload service:', error);
-    }
-  });
 
   // Toast pour drag & drop
   React.useEffect(() => {
@@ -98,15 +87,6 @@ export const ServicesSection: React.FC = () => {
   };
 
   return (
-    <>
-      {/* Barre de progression pour upload */}
-      <ProgressBar
-        progress={uploadState.progress}
-        status={uploadState.status}
-        fileName={uploadState.fileName}
-        onCancel={cancelUpload}
-      />
-      
     <div className="p-6 space-y-6">
       {/* Titre et description principaux, éditables inline avec cadre */}
       <div className="mb-8">
@@ -172,19 +152,17 @@ export const ServicesSection: React.FC = () => {
                             const file = e.target.files?.[0];
                             if (!file) return;
                             
-                            try {
-                              const imageUrl = await uploadImage(file);
-                              
-                              if (imageUrl) {
-                                const newServices = services.map((s, i) => i === idx ? { ...s, image: imageUrl } : s);
-                                updateField('data', 'services.items', newServices);
-                                
-                                // Sauvegarder automatiquement après l'upload
-                                await saveData();
-                                toast.success('Image du service mise à jour et sauvegardée', { position: 'top-right' });
-                              }
-                            } catch (error) {
-                              console.error('Erreur upload service:', error);
+                            toast.loading('Upload en cours...', { id: 'upload' });
+                            
+                            const result = await uploadImage(file);
+                            
+                            if (result.success && result.filename) {
+                              const newServices = services.map((s, i) => i === idx ? { ...s, image: `/rachef-uploads/${result.filename}` } : s);
+                              updateField('data', 'services.items', newServices);
+                              toast.success('Image uploadée avec succès !', { id: 'upload' });
+                              toast('N\'oublie pas de cliquer sur "Sauvegarder" pour enregistrer l\'image !', { icon: '💾', position: 'top-center' });
+                            } else {
+                              toast.error(`Erreur upload: ${result.error}`, { id: 'upload' });
                             }
                             
                             // Reset input value to allow re-uploading the same file if needed
@@ -249,7 +227,6 @@ export const ServicesSection: React.FC = () => {
         </Droppable>
       </DragDropContext>
     </div>
-    </>
   );
 };
 

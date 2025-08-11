@@ -6,6 +6,7 @@ import { Badge } from '../ui/badge';
 import { motion, AnimatePresence, PanInfo } from 'framer-motion';
 import { Document, Page, pdfjs } from 'react-pdf';
 import { useDashboardStore } from '../../stores/dashboardStore';
+import { usePdfLoader, getPdfJsConfig, detectDownloadManager } from '../../lib/pdfUtils';
 
 // Configuration du worker PDF
 pdfjs.GlobalWorkerOptions.workerSrc = `${window.location.origin}/rachef-uploads/pdf.worker.min.js`;
@@ -20,15 +21,18 @@ const FormationCatalogue: React.FC<FormationCatalogueProps> = ({
 }) => {
   const { datapJson } = useDashboardStore();
   const [numPages, setNumPages] = useState<number | null>(null);
-  const [pageNumber, setPageNumer] = useState(1);
+  const [pageNumber, setPageNumber] = useState(1);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [scale, setScale] = useState(1.4);
   const [isMobile, setIsMobile] = useState(false);
 
-  const pdfUrl = datapJson?.catalogueFormation?.pdfUrl || '/rachef-uploads/cata.pdf';
+  const originalPdfUrl = datapJson?.catalogueFormation?.pdfUrl || '/rachef-uploads/cata.pdf';
   const catalogueTitle = datapJson?.catalogueFormation?.title || title;
   const catalogueDescription = datapJson?.catalogueFormation?.description || description;
+  
+  // Utiliser notre loader PDF compatible IDM
+  const { pdfUrl, isLoading: isPdfLoading, error: pdfError, reload } = usePdfLoader(originalPdfUrl);
 
   // Détecter si on est sur mobile/tablette
   useEffect(() => {
@@ -45,10 +49,10 @@ const FormationCatalogue: React.FC<FormationCatalogueProps> = ({
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'ArrowLeft') {
         e.preventDefault();
-        handlePrev();
+        setPageNumber((p) => Math.max(1, p - 1));
       } else if (e.key === 'ArrowRight') {
         e.preventDefault();
-        handleNext();
+        setPageNumber((p) => (numPages ? Math.min(numPages, p + 1) : p));
       } else if (e.key === '+' || e.key === '=') {
         e.preventDefault();
         setScale(prev => Math.min(prev + 0.1, 2));
@@ -85,9 +89,9 @@ const FormationCatalogue: React.FC<FormationCatalogueProps> = ({
           e.preventDefault();
         }
         if (diffX > 0) {
-          handleNext();
+          setPageNumber((p) => (numPages ? Math.min(numPages, p + 1) : p));
         } else {
-          handlePrev();
+          setPageNumber((p) => Math.max(1, p - 1));
         }
         isDragging = false;
       }
@@ -300,25 +304,53 @@ const FormationCatalogue: React.FC<FormationCatalogueProps> = ({
                     {/* PDF Document */}
                     <div className="flex justify-center p-8">
                       <Document
-                        file={pdfUrl}
+                        {...getPdfJsConfig(pdfUrl)}
                         loading={
                           <div className="flex flex-col items-center justify-center min-h-[60vh]">
                             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mb-4"></div>
                             <p className="text-gray-600">
-                              {datapJson?.catalogueFormation?.loading?.title || "Chargement du catalogue..."}
+                              {isPdfLoading ? "Optimisation pour gestionnaires de téléchargement..." : (datapJson?.catalogueFormation?.loading?.title || "Chargement du catalogue...")}
                             </p>
                             <p className="text-sm text-gray-500">
-                              {datapJson?.catalogueFormation?.loading?.subtitle || "Préparation de votre catalogue"}
+                              {detectDownloadManager() ? "Mode compatibilité IDM activé" : (datapJson?.catalogueFormation?.loading?.subtitle || "Préparation de votre catalogue")}
                             </p>
                           </div>
                         }
-                        error={<div className="hidden" />}
+                        error={
+                          <div className="flex flex-col items-center justify-center min-h-[60vh] text-center p-8">
+                            <AlertCircle className="w-16 h-16 text-orange-500 mb-4" />
+                            <h3 className="text-xl font-semibold text-gray-800 mb-2">Problème de chargement</h3>
+                            <p className="text-gray-600 mb-4">
+                              {pdfError || "Le catalogue PDF ne peut pas être affiché."}
+                            </p>
+                            {detectDownloadManager() && (
+                              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
+                                <p className="text-sm text-blue-800">
+                                  <strong>IDM/Gestionnaire de téléchargement détecté :</strong><br/>
+                                  Certains gestionnaires interfèrent avec l'affichage des PDFs.
+                                </p>
+                              </div>
+                            )}
+                            <div className="flex gap-4">
+                              <Button onClick={reload} variant="outline" className="flex items-center gap-2">
+                                <RotateCw className="w-4 h-4" />
+                                Réessayer
+                              </Button>
+                              <Button onClick={() => window.open(originalPdfUrl, '_blank')} className="flex items-center gap-2">
+                                <Download className="w-4 h-4" />
+                                Télécharger le PDF
+                              </Button>
+                            </div>
+                          </div>
+                        }
                         onLoadSuccess={({ numPages }) => {
+                          console.log('✅ PDF chargé avec succès:', numPages, 'pages');
                           setNumPages(numPages);
                           setError(null);
                           setIsLoading(false);
                         }}
                         onLoadError={(err) => {
+                          console.error('❌ Erreur chargement PDF:', err);
                           setError(err.message || 'Erreur inconnue');
                           setIsLoading(false);
                         }}

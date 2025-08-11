@@ -6,25 +6,13 @@ import { useDashboardStore } from '../../stores/dashboardStore';
 import { Input } from '../ui/input';
 import { Textarea } from '../ui/textarea';
 import { Button } from '../ui/button';
-import { ProgressBar } from '../ui/progress-bar';
-import { useImageUpload } from '../../hooks/useImageUpload';
 import { DragDropContext, Droppable, Draggable, DropResult } from '@hello-pangea/dnd';
 import toast from 'react-hot-toast';
 
 export const FacilitiesSection: React.FC = () => {
-  const { dataJson, updateField, addItem, removeItem, saveData } = useDashboardStore();
+  const { dataJson, updateField, addItem, removeItem } = useDashboardStore();
   const facilities = dataJson.facilities?.items || [];
   const fileInputRefs = React.useRef<(HTMLInputElement | null)[]>([]);
-  
-  // Hook pour l'upload d'images avec progression
-  const { uploadImage, uploadState, cancelUpload } = useImageUpload({
-    onSuccess: async (imageUrl: string) => {
-      // L'URL sera utilisée dans le handler onChange
-    },
-    onError: (error: string) => {
-      console.error('Erreur upload atelier:', error);
-    }
-  });
 
   // Toast pour drag & drop
   React.useEffect(() => {
@@ -70,15 +58,6 @@ export const FacilitiesSection: React.FC = () => {
   };
 
   return (
-    <>
-      {/* Barre de progression pour upload */}
-      <ProgressBar
-        progress={uploadState.progress}
-        status={uploadState.status}
-        fileName={uploadState.fileName}
-        onCancel={cancelUpload}
-      />
-      
     <div className="p-6 space-y-6">
       {/* Titre et description principaux, éditables inline avec cadre */}
       <div className="mb-8">
@@ -143,22 +122,16 @@ export const FacilitiesSection: React.FC = () => {
                           onChange={async e => {
                             const file = e.target.files?.[0];
                             if (!file) return;
-                            
-                            try {
-                              const imageUrl = await uploadImage(file);
-                              
-                              if (imageUrl) {
-                                const newFacilities = facilities.map((f, i) => i === idx ? { ...f, image: imageUrl } : f);
-                                updateField('data', 'facilities.items', newFacilities);
-                                
-                                // Sauvegarder automatiquement après l'upload
-                                await saveData();
-                                toast.success('Image de l\'atelier mise à jour et sauvegardée', { position: 'top-right' });
-                              }
-                            } catch (error) {
-                              console.error('Erreur upload atelier:', error);
+                            const formData = new FormData();
+                            formData.append('file', file, file.name);
+                            const apiUrl = `${window.location.protocol}//${window.location.hostname}:4000/api/upload`;
+                            const res = await fetch(apiUrl, { method: 'POST', body: formData });
+                            if (res.ok) {
+                              const data = await res.json();
+                              const newFacilities = facilities.map((f, i) => i === idx ? { ...f, image: `/rachef-uploads/${data.filename}` } : f);
+                              updateField('data', 'facilities.items', newFacilities);
+                              toast('N’oublie pas de cliquer sur “Sauvegarder” pour enregistrer l’image !', { icon: '💾', position: 'top-center' });
                             }
-                            
                             if (fileInputRefs.current[idx]) fileInputRefs.current[idx]!.value = '';
                           }}
                         />
@@ -215,7 +188,6 @@ export const FacilitiesSection: React.FC = () => {
         </Droppable>
       </DragDropContext>
     </div>
-    </>
   );
 };
 

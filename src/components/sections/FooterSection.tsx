@@ -9,6 +9,8 @@ import { Button } from '../ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
 import { X } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import toast from 'react-hot-toast';
+import { uploadImage } from '../../lib/uploadUtils';
 
 export const FooterSection: React.FC = () => {
   const { datapJson, dataJson, updateField } = useDashboardStore();
@@ -141,27 +143,20 @@ export const FooterSection: React.FC = () => {
     const file = e.target.files?.[0];
     if (!file) return;
 
-    const formData = new FormData();
-    formData.append('file', file);
-
-    try {
-      const response = await fetch('http://localhost:4000/api/upload', {
-        method: 'POST',
-        body: formData
-      });
-
-      if (response.ok) {
-        const data = await response.json();
-        const imageUrl = `/rachef-uploads/${data.filename}`;
-        
-        if (isGroupLogo) {
-          handleChange('groupLogoUrl', imageUrl);
-        } else {
-          handleChange('logoUrl', imageUrl);
-        }
+    const result = await uploadImage(file);
+    
+    if (result.success && result.filename) {
+      const imageUrl = `/rachef-uploads/${result.filename}`;
+      
+      if (isGroupLogo) {
+        handleChange('groupLogoUrl', imageUrl);
+      } else {
+        handleChange('logoUrl', imageUrl);
       }
-    } catch (error) {
-      console.error('Erreur upload:', error);
+      
+      toast.success('Logo uploadé avec succès !');
+    } else {
+      toast.error(`Erreur upload: ${result.error}`);
     }
   };
 

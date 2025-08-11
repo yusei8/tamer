@@ -148,7 +148,7 @@ export const ContactSection: React.FC = () => {
   return (
     <div className="p-6">
       {/* Mode d'édition - AMÉLIORÉ */}
-      <div className="flex justify-between items-center mb-4 p-4 bg-gradient-to-r from-blue-50 to-green-50 border-2 border-blue-200 rounded-lg">
+      <div className="flex justify-between items-center mb-4 p-4 bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 rounded-lg">
         <div className="flex flex-col">
           <h2 className="text-2xl font-bold text-slate-800">Section Contact - Édition en direct</h2>
           <p className="text-sm text-slate-600 mt-1">
