@@ -810,11 +810,7 @@ app.post('/api/filemanager/extract-zip', requireAdminAuth, (req, res) => {
   }
 });
 
-app.get('*', (req, res, next) => {
-  // Exclure les routes API et fichiers statiques
-  if (req.path.startsWith('/api') || req.path.startsWith('/rachef-uploads') || req.path.startsWith('/dist')) {
-    return next();
-  }
+app.get(/^(?!\/api).*/, (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
