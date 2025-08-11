@@ -810,10 +810,36 @@ app.post('/api/filemanager/extract-zip', requireAdminAuth, (req, res) => {
   }
 });
 
-app.get(/^(?!\/api).*/, (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+app.get('*', (req, res, next) => {
+  // Liste des préfixes à exclure
+  const excludedPrefixes = [
+    '/api',
+    '/rachef-uploads',
+    '/assets',
+    '/public'
+  ];
+  
+  // Vérifier si la requête commence par un préfixe exclu
+  if (excludedPrefixes.some(prefix => req.path.startsWith(prefix))) {
+    return next();
+  }
+  
+  // Pour toutes les autres requêtes, servir l'application React
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'), (err) => {
+    if (err) {
+      console.error('Error sending index.html:', err);
+      res.status(500).send('Error loading application');
+    }
+  });
 });
 
+// Gestion des erreurs
+app.use((err, req, res, next) => {
+  console.error('Server error:', err.stack);
+  res.status(500).json({ error: 'Internal server error' });
+});
+
+// Démarrage du serveur
 app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Serveur backend lancé sur http://0.0.0.0:${PORT}`);
-}); 
+  console.log(`Server running on http://0.0.0.0:${PORT}`);
+});
