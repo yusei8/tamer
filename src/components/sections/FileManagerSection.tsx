@@ -141,22 +141,6 @@ export const FileManagerSection: React.FC = () => {
     stage: ''
   });
 
-  // États pour la progression de l'extraction ZIP
-  const [zipProgress, setZipProgress] = useState<{
-    isExtracting: boolean;
-    progress: number;
-    stage: string;
-    extractedFiles: number;
-    totalFiles: number;
-    currentFile?: string;
-  }>({
-    isExtracting: false,
-    progress: 0,
-    stage: '',
-    extractedFiles: 0,
-    totalFiles: 0
-  });
-
   // États pour les informations système
   const [systemInfo, setSystemInfo] = useState<{
     system: {
@@ -507,32 +491,7 @@ export const FileManagerSection: React.FC = () => {
       return;
     }
 
-    // Initialiser la progression
-    setZipProgress({
-      isExtracting: true,
-      progress: 0,
-      stage: 'Préparation de l\'extraction...',
-      extractedFiles: 0,
-      totalFiles: 0
-    });
-
     try {
-      // Simuler la progression (car l'API actuelle ne fournit pas de progression en temps réel)
-      const progressInterval = setInterval(() => {
-        setZipProgress(prev => {
-          if (prev.progress < 90) {
-            return {
-              ...prev,
-              progress: prev.progress + Math.random() * 20,
-              stage: prev.progress < 30 ? 'Lecture du fichier ZIP...' :
-                     prev.progress < 60 ? 'Extraction en cours...' :
-                     'Finalisation...'
-            };
-          }
-          return prev;
-        });
-      }, 500);
-
       const response = await fetch('/api/filemanager/extract-zip', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -541,50 +500,13 @@ export const FileManagerSection: React.FC = () => {
       
       const data = await response.json();
       
-      clearInterval(progressInterval);
-      
       if (response.ok) {
-        // Finaliser la progression
-        setZipProgress({
-          isExtracting: false,
-          progress: 100,
-          stage: 'Extraction terminée',
-          extractedFiles: data.extractedFiles.length,
-          totalFiles: data.extractedFiles.length
-        });
-        
         toast.success(`Extraction terminée : ${data.extractedFiles.length} fichiers`);
         loadDirectory(currentPath);
-        
-        // Réinitialiser après 2 secondes
-        setTimeout(() => {
-          setZipProgress({
-            isExtracting: false,
-            progress: 0,
-            stage: '',
-            extractedFiles: 0,
-            totalFiles: 0
-          });
-        }, 2000);
       } else {
-        clearInterval(progressInterval);
-        setZipProgress({
-          isExtracting: false,
-          progress: 0,
-          stage: '',
-          extractedFiles: 0,
-          totalFiles: 0
-        });
         toast.error(data.error || 'Erreur lors de l\'extraction');
       }
     } catch (error) {
-      setZipProgress({
-        isExtracting: false,
-        progress: 0,
-        stage: '',
-        extractedFiles: 0,
-        totalFiles: 0
-      });
       toast.error('Erreur réseau');
     }
   };
@@ -946,92 +868,6 @@ export const FileManagerSection: React.FC = () => {
           )}
         </AnimatePresence>
 
-        {/* Barre de progression de l'extraction ZIP */}
-        <AnimatePresence>
-          {(zipProgress.isExtracting || zipProgress.progress > 0) && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="bg-gradient-to-r from-orange-50 to-amber-50 border border-orange-200 rounded-lg p-4 mb-4"
-            >
-              <div className="flex items-center justify-between mb-3">
-                <div className="flex items-center space-x-3">
-                  {zipProgress.isExtracting ? (
-                    <Archive className="w-5 h-5 text-orange-600 animate-pulse" />
-                  ) : zipProgress.progress === 100 ? (
-                    <CheckCircle className="w-5 h-5 text-green-600" />
-                  ) : (
-                    <AlertTriangle className="w-5 h-5 text-red-600" />
-                  )}
-                  <div>
-                    <h4 className="font-medium text-gray-800">
-                      {zipProgress.isExtracting ? 'Extraction ZIP en cours...' : 
-                       zipProgress.progress === 100 ? 'Extraction terminée !' : 
-                       'Extraction interrompue'}
-                    </h4>
-                    <p className="text-sm text-gray-600">{zipProgress.stage}</p>
-                  </div>
-                </div>
-                <div className="text-right">
-                  <div className="text-lg font-bold text-orange-600">
-                    {Math.round(zipProgress.progress)}%
-                  </div>
-                  {zipProgress.extractedFiles > 0 && zipProgress.totalFiles > 0 && (
-                    <div className="text-xs text-gray-500">
-                      {zipProgress.extractedFiles}/{zipProgress.totalFiles} fichiers
-                    </div>
-                  )}
-                  {zipProgress.currentFile && (
-                    <div className="text-xs text-gray-500 truncate max-w-32">
-                      {zipProgress.currentFile}
-                    </div>
-                  )}
-                </div>
-              </div>
-              
-              <div className="space-y-2">
-                <div className="relative">
-                  <Progress 
-                    value={zipProgress.progress} 
-                    className={`h-3 transition-all duration-300 ${
-                      zipProgress.isExtracting ? 'animate-pulse' : ''
-                    }`}
-                  />
-                  {zipProgress.isExtracting && (
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-bounce"></div>
-                  )}
-                </div>
-                <div className="flex justify-between text-xs text-gray-500">
-                  <span className="flex items-center">
-                    📦 Début
-                  </span>
-                  <span className={`px-2 py-1 rounded-md border transition-colors ${
-                    zipProgress.isExtracting 
-                      ? 'bg-orange-50 border-orange-200 text-orange-700' 
-                      : zipProgress.progress === 100 
-                      ? 'bg-green-50 border-green-200 text-green-700'
-                      : 'bg-white border-gray-200'
-                  }`}>
-                    {zipProgress.stage}
-                  </span>
-                  <span className="flex items-center">
-                    ✅ Terminé
-                  </span>
-                </div>
-              </div>
-              
-              {zipProgress.progress === 100 && zipProgress.extractedFiles > 0 && (
-                <div className="mt-3 p-2 bg-green-50 border border-green-200 rounded-md">
-                  <div className="text-sm text-green-800">
-                    ✅ Extraction terminée : <code className="bg-green-100 px-1 rounded">{zipProgress.extractedFiles} fichiers extraits</code>
-                  </div>
-                </div>
-              )}
-            </motion.div>
-          )}
-        </AnimatePresence>
-
         {/* Navigation et actions */}
         <div className="space-y-4">
           {/* Navigation et chemin */}
@@ -1206,19 +1042,14 @@ export const FileManagerSection: React.FC = () => {
                                 <Button
                                   size="sm"
                                   variant="ghost"
-                                  disabled={zipProgress.isExtracting}
                                   onClick={(e) => {
                                     e.stopPropagation();
                                     extractZip(item.path);
                                   }}
-                                  title={zipProgress.isExtracting ? "Extraction en cours..." : "Extraire ZIP"}
-                                  className={zipProgress.isExtracting ? "opacity-50 cursor-not-allowed" : "hover:bg-blue-100"}
+                                  title="Extraire ZIP"
+                                  className="hover:bg-blue-100"
                                 >
-                                  {zipProgress.isExtracting ? (
-                                    <Loader2 className="w-3 h-3 animate-spin" />
-                                  ) : (
-                                    <Archive className="w-3 h-3" />
-                                  )}
+                                  <Archive className="w-3 h-3" />
                                 </Button>
                               )}
                               
@@ -1313,22 +1144,14 @@ export const FileManagerSection: React.FC = () => {
                                 <Button
                                   size="sm"
                                   variant="outline"
-                                  disabled={zipProgress.isExtracting}
                                   onClick={(e) => {
                                     e.stopPropagation();
                                     extractZip(item.path);
                                   }}
-                                  className={zipProgress.isExtracting 
-                                    ? "flex-1 bg-gray-50 border-gray-200 text-gray-400 cursor-not-allowed" 
-                                    : "flex-1 bg-blue-50 border-blue-200 text-blue-700 hover:bg-blue-100"
-                                  }
+                                  className="flex-1 bg-blue-50 border-blue-200 text-blue-700 hover:bg-blue-100"
                                 >
-                                  {zipProgress.isExtracting ? (
-                                    <Loader2 className="w-4 h-4 mr-1 animate-spin" />
-                                  ) : (
-                                    <Archive className="w-4 h-4 mr-1" />
-                                  )}
-                                  {zipProgress.isExtracting ? "Extraction..." : "Extraire"}
+                                  <Archive className="w-4 h-4 mr-1" />
+                                  Extraire
                                 </Button>
                               )}
                               
