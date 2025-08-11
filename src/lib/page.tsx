@@ -26,6 +26,7 @@ import { useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, RotateCw } from 'lucide-react';
 import { Document, Page, pdfjs } from 'react-pdf';
+import { usePdfLoader, getPdfJsConfig, detectDownloadManager } from './pdfUtils';
 import data from '../data.json';
 import datap from '../datap.json';
 
@@ -47,7 +48,10 @@ export const CatalogueFormation = () => {
     return [relativePath, absolutePath, testPdf][0];
   };
 
-  const pdfUrl = getPdfUrl();
+  const originalPdfUrl = getPdfUrl();
+  
+  // Utiliser notre loader PDF compatible IDM
+  const { pdfUrl, isLoading: isPdfLoading, error: pdfError, reload } = usePdfLoader(originalPdfUrl);
 
   useEffect(() => {
     const loadPdf = async () => {

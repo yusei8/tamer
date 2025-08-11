@@ -10,12 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "start": "node server.cjs",
-    "render-build": "npm install && npm run build",
-    "fix-paths": "find src -type f -exec sed -i 's|\"\\.\\./ui/|\"@/components/ui/|g' {} +"
-  },
-  "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=9.0.0"
+    "render-build": "npm run build && npm install"
   },
   "dependencies": {
     "@hello-pangea/dnd": "^18.0.1",

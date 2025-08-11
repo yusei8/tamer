@@ -10,14 +10,17 @@ const os = require('os');
 const app = express();
 const PORT = 4000;
 
-
-
-app.use(cors());
-app.use(express.json());
-
-// Fichiers statiques ensuite
 app.use(express.static(path.join(__dirname, 'dist')));
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Middlewares
+app.use(cors({
+  origin: true, // Permet toutes les origines
+  credentials: true, // Permet les cookies/credentials
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'Accept', 'Origin', 'X-Requested-With']
+}));
+app.use(express.json());
 app.use('/rachef-uploads', express.static(path.join(__dirname, 'public/rachef-uploads')));
 
 // Chemins vers les fichiers JSON
@@ -63,8 +66,12 @@ const upload = multer({
 // Upload d'image
 app.post('/api/upload', (req, res) => {
   console.log('=== DÉBUT UPLOAD ===');
+  console.log('Timestamp:', new Date().toISOString());
+  console.log('IP Client:', req.ip || req.connection.remoteAddress);
   console.log('Headers:', req.headers);
   console.log('Content-Type:', req.get('Content-Type'));
+  console.log('Origin:', req.get('Origin'));
+  console.log('User-Agent:', req.get('User-Agent'));
   
   upload.single('file')(req, res, (err) => {
     if (err) {
@@ -810,36 +817,21 @@ app.post('/api/filemanager/extract-zip', requireAdminAuth, (req, res) => {
   }
 });
 
-app.get('*', (req, res, next) => {
-  // Liste des préfixes à exclure
-  const excludedPrefixes = [
-    '/api',
-    '/rachef-uploads',
-    '/assets',
-    '/public'
-  ];
-  
-  // Vérifier si la requête commence par un préfixe exclu
-  if (excludedPrefixes.some(prefix => req.path.startsWith(prefix))) {
-    return next();
-  }
-  
-  // Pour toutes les autres requêtes, servir l'application React
-  res.sendFile(path.join(__dirname, 'dist', 'index.html'), (err) => {
-    if (err) {
-      console.error('Error sending index.html:', err);
-      res.status(500).send('Error loading application');
-    }
-  });
+
+app.get(/^(?!\/api).*/, (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
-// Gestion des erreurs
-app.use((err, req, res, next) => {
-  console.error('Server error:', err.stack);
-  res.status(500).json({ error: 'Internal server error' });
-});
+// Détection de l'environnement
+const isProduction = process.env.NODE_ENV === 'production';
+const host = isProduction ? '0.0.0.0' : 'localhost';
 
-// Démarrage du serveur
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server running on http://0.0.0.0:${PORT}`);
-});
+app.listen(PORT, host, () => {
+  console.log(`=== SERVEUR BACKEND DÉMARRÉ ===`);
+  console.log(`Mode: ${isProduction ? 'PRODUCTION' : 'DÉVELOPPEMENT'}`);
+  console.log(`URL: http://${host}:${PORT}`);
+  console.log(`Uploads: http://${host}:${PORT}/api/upload`);
+  console.log(`Static files: http://${host}:${PORT}/rachef-uploads/`);
+  console.log(`Interface: http://${host}:${PORT}/`);
+  console.log(`================================`);
+}); 
