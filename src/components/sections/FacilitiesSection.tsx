@@ -10,7 +10,7 @@ import { DragDropContext, Droppable, Draggable, DropResult } from '@hello-pangea
 import toast from 'react-hot-toast';
 
 export const FacilitiesSection: React.FC = () => {
-  const { dataJson, updateField, addItem, removeItem } = useDashboardStore();
+  const { dataJson, updateField, addItem, removeItem, saveData } = useDashboardStore();
   const facilities = dataJson.facilities?.items || [];
   const fileInputRefs = React.useRef<(HTMLInputElement | null)[]>([]);
 
@@ -122,16 +122,29 @@ export const FacilitiesSection: React.FC = () => {
                           onChange={async e => {
                             const file = e.target.files?.[0];
                             if (!file) return;
-                            const formData = new FormData();
-                            formData.append('file', file, file.name);
-                            const apiUrl = `${window.location.protocol}//${window.location.hostname}:4000/api/upload`;
-                            const res = await fetch(apiUrl, { method: 'POST', body: formData });
-                            if (res.ok) {
-                              const data = await res.json();
-                              const newFacilities = facilities.map((f, i) => i === idx ? { ...f, image: `/rachef-uploads/${data.filename}` } : f);
-                              updateField('data', 'facilities.items', newFacilities);
-                              toast('N’oublie pas de cliquer sur “Sauvegarder” pour enregistrer l’image !', { icon: '💾', position: 'top-center' });
+                            
+                            try {
+                              const formData = new FormData();
+                              formData.append('file', file, file.name);
+                              const apiUrl = `${window.location.protocol}//${window.location.hostname}:4000/api/upload`;
+                              const res = await fetch(apiUrl, { method: 'POST', body: formData });
+                              
+                              if (res.ok) {
+                                const data = await res.json();
+                                const newFacilities = facilities.map((f, i) => i === idx ? { ...f, image: `/rachef-uploads/${data.filename}` } : f);
+                                updateField('data', 'facilities.items', newFacilities);
+                                
+                                // Sauvegarder automatiquement après l'upload
+                                await saveData();
+                                toast.success('Image de l\'atelier mise à jour et sauvegardée', { position: 'top-center' });
+                              } else {
+                                toast.error("Erreur lors de l'upload de l'image", { position: 'top-center' });
+                              }
+                            } catch (error) {
+                              console.error('Erreur upload:', error);
+                              toast.error("Erreur de connexion lors de l'upload", { position: 'top-center' });
                             }
+                            
                             if (fileInputRefs.current[idx]) fileInputRefs.current[idx]!.value = '';
                           }}
                         />
