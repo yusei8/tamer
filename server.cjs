@@ -10,12 +10,14 @@ const os = require('os');
 const app = express();
 const PORT = 4000;
 
-app.use(express.static(path.join(__dirname, 'dist')));
-app.use('/rachef-uploads', express.static(path.join(__dirname, 'public/rachef-uploads')));
 
-// Middlewares
+
 app.use(cors());
 app.use(express.json());
+
+// Fichiers statiques ensuite
+app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use('/rachef-uploads', express.static(path.join(__dirname, 'public/rachef-uploads')));
 
 // Chemins vers les fichiers JSON
@@ -807,7 +809,12 @@ app.post('/api/filemanager/extract-zip', requireAdminAuth, (req, res) => {
     res.status(500).json({ error: 'Erreur extraction ZIP', details: error.message });
   }
 });
-app.get(/^(?!\/api).*/, (req, res) => {
+
+app.get('*', (req, res, next) => {
+  // Exclure les routes API et fichiers statiques
+  if (req.path.startsWith('/api') || req.path.startsWith('/rachef-uploads') || req.path.startsWith('/dist')) {
+    return next();
+  }
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
