@@ -12,6 +12,13 @@
     "start": "node server.cjs",
     "render-build": "npm run build && npm install"
   },
+   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "node server.cjs",
+    "render-build": "npm run build"
+  },
   "dependencies": {
     "@hello-pangea/dnd": "^18.0.1",
     "@hookform/resolvers": "^3.9.0",
