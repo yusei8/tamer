@@ -11,6 +11,7 @@ import { useDashboardStore } from '../../stores/dashboardStore';
 import { Navbar, Footer } from '../../Acceuil';
 import { Link } from 'react-router-dom';
 import toast from 'react-hot-toast';
+import { uploadImage } from '../../lib/uploadUtils';
 
 // Map des icônes pour chaque formation
 const FORMATION_ICONS = {
@@ -46,27 +47,15 @@ export const FormationPageFullEditor: React.FC<FormationPageFullEditorProps> = (
 
   // Fonction pour uploader une image
   const handleImageUpload = async (file: File, fieldPath: string) => {
-    const formData = new FormData();
-    formData.append('file', file);
+    const result = await uploadImage(file);
     
-    try {
-      const apiUrl = `${window.location.protocol}//${window.location.hostname}:4000/api/upload`;
-      const res = await fetch(apiUrl, {
-        method: 'POST',
-        body: formData,
-      });
-      
-      if (res.ok) {
-        const data = await res.json();
-        const imageUrl = `/rachef-uploads/${data.filename}`;
-        updateField('datap', `${formationKey}.${fieldPath}`, imageUrl);
-        toast.success('Image uploadée avec succès', { position: 'top-right' });
-        return imageUrl;
-      } else {
-        throw new Error('Erreur upload');
-      }
-    } catch (error) {
-      toast.error("Erreur lors de l'upload de l'image", { position: 'top-right' });
+    if (result.success && result.filename) {
+      const imageUrl = `/rachef-uploads/${result.filename}`;
+      updateField('datap', `${formationKey}.${fieldPath}`, imageUrl);
+      toast.success('Image uploadée avec succès', { position: 'top-right' });
+      return imageUrl;
+    } else {
+      toast.error(`Erreur upload: ${result.error}`, { position: 'top-right' });
       return null;
     }
   };

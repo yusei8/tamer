@@ -8,6 +8,7 @@ import { Textarea } from '../ui/textarea';
 import { Button } from '../ui/button';
 import { DragDropContext, Droppable, Draggable, DropResult } from '@hello-pangea/dnd';
 import toast from 'react-hot-toast';
+import { uploadImage } from '../../lib/uploadUtils';
 
 export const FacilitiesSection: React.FC = () => {
   const { dataJson, updateField, addItem, removeItem } = useDashboardStore();
@@ -122,16 +123,20 @@ export const FacilitiesSection: React.FC = () => {
                           onChange={async e => {
                             const file = e.target.files?.[0];
                             if (!file) return;
-                            const formData = new FormData();
-                            formData.append('file', file, file.name);
-                            const apiUrl = `${window.location.protocol}//${window.location.hostname}:4000/api/upload`;
-                            const res = await fetch(apiUrl, { method: 'POST', body: formData });
-                            if (res.ok) {
-                              const data = await res.json();
-                              const newFacilities = facilities.map((f, i) => i === idx ? { ...f, image: `/rachef-uploads/${data.filename}` } : f);
+                            
+                            toast.loading('Upload en cours...', { id: 'facility-upload' });
+                            
+                            const result = await uploadImage(file);
+                            
+                            if (result.success && result.filename) {
+                              const newFacilities = facilities.map((f, i) => i === idx ? { ...f, image: `/rachef-uploads/${result.filename}` } : f);
                               updateField('data', 'facilities.items', newFacilities);
-                              toast('N’oublie pas de cliquer sur “Sauvegarder” pour enregistrer l’image !', { icon: '💾', position: 'top-center' });
+                              toast.success('Image uploadée avec succès !', { id: 'facility-upload' });
+                              toast('N\'oublie pas de cliquer sur "Sauvegarder" pour enregistrer l\'image !', { icon: '💾', position: 'top-center' });
+                            } else {
+                              toast.error(`Erreur upload: ${result.error}`, { id: 'facility-upload' });
                             }
+                            
                             if (fileInputRefs.current[idx]) fileInputRefs.current[idx]!.value = '';
                           }}
                         />

@@ -20,6 +20,7 @@ import { Switch } from '../ui/switch';
 import { DragDropContext, Droppable, Draggable, DropResult } from '@hello-pangea/dnd';
 import { Badge } from '../ui/badge';
 import { usePdfLoader, getPdfJsConfig, detectDownloadManager } from '../../lib/pdfUtils';
+import { uploadImage } from '../../lib/uploadUtils';
 import { FormationPageEditor } from './FormationPageEditor';
 import { FormationTemplateSelector } from './FormationTemplateSelector';
 import { InlineFormationEditor } from './InlineFormationEditor';
@@ -357,7 +358,7 @@ function FormationEditStepper({ pageEditData, handlePageEditChange, handlePageEd
                               
                               const formData = new FormData();
                               formData.append('file', file);
-                              const apiUrl = `${window.location.protocol}//${window.location.hostname}:4000/api/upload`;
+                              // Utilisation de l'utilitaire uploadImage pour la compatibilité serveur
                               
                               try {
                                 const res = await fetch(apiUrl, {
@@ -845,7 +846,7 @@ function FormationEditStepper({ pageEditData, handlePageEditChange, handlePageEd
                                   if (!file) return;
                                   const formData = new FormData();
                                   formData.append('file', file, file.name);
-                                  const apiUrl = `${window.location.protocol}//${window.location.hostname}:4000/api/upload`;
+                                  // Utilisation de l'utilitaire uploadImage pour la compatibilité serveur
                                   const res = await fetch(apiUrl, { method: 'POST', body: formData });
                                   if (res.ok) {
                                     const data = await res.json();
@@ -961,7 +962,7 @@ function FormationEditStepper({ pageEditData, handlePageEditChange, handlePageEd
                                 if (!file) return;
                                 const formData = new FormData();
                                 formData.append('file', file, file.name);
-                                const apiUrl = `${window.location.protocol}//${window.location.hostname}:4000/api/upload`;
+                                // Utilisation de l'utilitaire uploadImage pour la compatibilité serveur
                                 const res = await fetch(apiUrl, { method: 'POST', body: formData });
                                 if (res.ok) {
                                   const data = await res.json();
@@ -1021,7 +1022,7 @@ function FormationEditStepper({ pageEditData, handlePageEditChange, handlePageEd
                               if (!file) return;
                               const formData = new FormData();
                               formData.append('file', file, file.name);
-                              const apiUrl = `${window.location.protocol}//${window.location.hostname}:4000/api/upload`;
+                              // Utilisation de l'utilitaire uploadImage pour la compatibilité serveur
                               const res = await fetch(apiUrl, { method: 'POST', body: formData });
                               if (res.ok) {
                                 const data = await res.json();
@@ -1080,7 +1081,7 @@ function FormationEditStepper({ pageEditData, handlePageEditChange, handlePageEd
                               if (!file) return;
                               const formData = new FormData();
                               formData.append('file', file, file.name);
-                              const apiUrl = `${window.location.protocol}//${window.location.hostname}:4000/api/upload`;
+                              // Utilisation de l'utilitaire uploadImage pour la compatibilité serveur
                               const res = await fetch(apiUrl, { method: 'POST', body: formData });
                               if (res.ok) {
                                 const data = await res.json();
@@ -1262,7 +1263,7 @@ function FormationEditStepper({ pageEditData, handlePageEditChange, handlePageEd
                               if (!file) return;
                               const formData = new FormData();
                               formData.append('file', file, file.name);
-                              const apiUrl = `${window.location.protocol}//${window.location.hostname}:4000/api/upload`;
+                              // Utilisation de l'utilitaire uploadImage pour la compatibilité serveur
                               const res = await fetch(apiUrl, { method: 'POST', body: formData });
                               if (res.ok) {
                                 const data = await res.json();
@@ -1305,7 +1306,7 @@ function FormationEditStepper({ pageEditData, handlePageEditChange, handlePageEd
                               if (!file) return;
                               const formData = new FormData();
                               formData.append('file', file, file.name);
-                              const apiUrl = `${window.location.protocol}//${window.location.hostname}:4000/api/upload`;
+                              // Utilisation de l'utilitaire uploadImage pour la compatibilité serveur
                               const res = await fetch(apiUrl, { method: 'POST', body: formData });
                               if (res.ok) {
                                 const data = await res.json();
@@ -1348,7 +1349,7 @@ function FormationEditStepper({ pageEditData, handlePageEditChange, handlePageEd
                               if (!file) return;
                               const formData = new FormData();
                               formData.append('file', file, file.name);
-                              const apiUrl = `${window.location.protocol}//${window.location.hostname}:4000/api/upload`;
+                              // Utilisation de l'utilitaire uploadImage pour la compatibilité serveur
                               const res = await fetch(apiUrl, { method: 'POST', body: formData });
                               if (res.ok) {
                                 const data = await res.json();
@@ -1401,7 +1402,7 @@ function FormationEditStepper({ pageEditData, handlePageEditChange, handlePageEd
                               if (!file) return;
                               const formData = new FormData();
                               formData.append('file', file, file.name);
-                              const apiUrl = `${window.location.protocol}//${window.location.hostname}:4000/api/upload`;
+                              // Utilisation de l'utilitaire uploadImage pour la compatibilité serveur
                               const res = await fetch(apiUrl, { method: 'POST', body: formData });
                               if (res.ok) {
                                 const data = await res.json();
@@ -1461,7 +1462,7 @@ function FormationEditStepper({ pageEditData, handlePageEditChange, handlePageEd
                             if (!file) return;
                             const formData = new FormData();
                             formData.append('file', file, file.name);
-                            const apiUrl = `${window.location.protocol}//${window.location.hostname}:4000/api/upload`;
+                                                              // Utilisation de l'utilitaire uploadImage pour la compatibilité serveur
                             const res = await fetch(apiUrl, { method: 'POST', body: formData });
                             if (res.ok) {
                               const data = await res.json();
@@ -1520,7 +1521,7 @@ function FormationEditStepper({ pageEditData, handlePageEditChange, handlePageEd
                             if (!file) return;
                             const formData = new FormData();
                             formData.append('file', file, file.name);
-                            const apiUrl = `${window.location.protocol}//${window.location.hostname}:4000/api/upload`;
+                                                              // Utilisation de l'utilitaire uploadImage pour la compatibilité serveur
                             const res = await fetch(apiUrl, { method: 'POST', body: formData });
                             if (res.ok) {
                               const data = await res.json();
@@ -1739,23 +1740,17 @@ export const FormationsSection: React.FC = () => {
   const handleCataloguePdfUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
-    const formData = new FormData();
-    formData.append('file', file, file.name);
-    const apiUrl = `${window.location.protocol}//${window.location.hostname}:4000/api/upload`;
-    try {
-      const res = await fetch(apiUrl, {
-        method: 'POST',
-        body: formData,
-      });
-      if (res.ok) {
-        const data = await res.json();
-        setCatalogue(c => ({ ...c, pdfUrl: `/rachef-uploads/${data.filename}` }));
-        updateField('datap', 'catalogueFormation.pdfUrl', `/rachef-uploads/${data.filename}`);
-      } else {
-        toast.error("Erreur lors de l'upload du PDF", { position: 'top-right' });
-      }
-    } catch {
-      toast.error("Erreur lors de l'upload du PDF", { position: 'top-right' });
+    
+    toast.loading('Upload PDF en cours...', { id: 'pdf-upload' });
+    
+    const result = await uploadImage(file); // uploadImage fonctionne aussi pour les PDFs
+    
+    if (result.success && result.filename) {
+      setCatalogue(c => ({ ...c, pdfUrl: `/rachef-uploads/${result.filename}` }));
+      updateField('datap', 'catalogueFormation.pdfUrl', `/rachef-uploads/${result.filename}`);
+      toast.success('PDF uploadé avec succès !', { id: 'pdf-upload' });
+    } else {
+      toast.error(`Erreur upload PDF: ${result.error}`, { id: 'pdf-upload' });
     }
   };
   // --- Save catalogue ---

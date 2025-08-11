@@ -31,8 +31,41 @@ const FormationCatalogue: React.FC<FormationCatalogueProps> = ({
   const catalogueTitle = datapJson?.catalogueFormation?.title || title;
   const catalogueDescription = datapJson?.catalogueFormation?.description || description;
   
+  // Debug: vérifier l'URL PDF
+  console.log('🔍 FormationCatalogue - URL PDF originale:', originalPdfUrl);
+  console.log('🔍 FormationCatalogue - datapJson:', datapJson?.catalogueFormation);
+  
   // Utiliser notre loader PDF compatible IDM
   const { pdfUrl, isLoading: isPdfLoading, error: pdfError, reload } = usePdfLoader(originalPdfUrl);
+  
+  // Debug: vérifier l'URL finale
+  console.log('🔍 FormationCatalogue - URL PDF finale:', pdfUrl);
+  console.log('🔍 FormationCatalogue - isPdfLoading:', isPdfLoading);
+  console.log('🔍 FormationCatalogue - pdfError:', pdfError);
+  
+  // Vérifier l'accessibilité du fichier PDF
+  useEffect(() => {
+    const checkPdfAccessibility = async () => {
+      const testUrl = pdfUrl || originalPdfUrl;
+      if (testUrl && testUrl !== '/rachef-uploads/cata.pdf') {
+        try {
+          console.log('🔍 Test d\'accessibilité du PDF:', testUrl);
+          const response = await fetch(testUrl);
+          console.log('🔍 Réponse du serveur:', response.status, response.statusText);
+          
+          if (!response.ok) {
+            console.error('❌ PDF inaccessible:', response.status, response.statusText);
+          } else {
+            console.log('✅ PDF accessible');
+          }
+        } catch (error) {
+          console.error('❌ Erreur lors du test d\'accessibilité:', error);
+        }
+      }
+    };
+    
+    checkPdfAccessibility();
+  }, [pdfUrl, originalPdfUrl]);
 
   // Détecter si on est sur mobile/tablette
   useEffect(() => {
@@ -302,10 +335,12 @@ const FormationCatalogue: React.FC<FormationCatalogueProps> = ({
                     )}
 
                     {/* PDF Document */}
-                    <div className="flex justify-center p-8">
-                      <Document
-                        {...getPdfJsConfig(pdfUrl)}
-                        loading={
+                    {pdfUrl || originalPdfUrl ? (
+                      <div className="flex justify-center p-8">
+                        <Document
+                          file={pdfUrl || originalPdfUrl}
+                          {...getPdfJsConfig(pdfUrl || originalPdfUrl)}
+                          loading={
                           <div className="flex flex-col items-center justify-center min-h-[60vh]">
                             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mb-4"></div>
                             <p className="text-gray-600">
@@ -378,7 +413,20 @@ const FormationCatalogue: React.FC<FormationCatalogueProps> = ({
                           />
                         </motion.div>
                       </Document>
-                    </div>
+                      </div>
+                    ) : (
+                      <div className="flex flex-col items-center justify-center min-h-[60vh] text-center p-8">
+                        <AlertCircle className="w-16 h-16 text-orange-500 mb-4" />
+                        <h3 className="text-xl font-semibold text-gray-800 mb-2">Aucun PDF disponible</h3>
+                        <p className="text-gray-600 mb-4">
+                          Aucun fichier PDF n'est configuré pour le catalogue de formations.
+                        </p>
+                        <div className="text-sm text-gray-500">
+                          <p>URL attendue: {originalPdfUrl}</p>
+                          <p>Vérifiez la configuration dans le dashboard.</p>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 )}
               </div>

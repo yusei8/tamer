@@ -13,6 +13,7 @@ import { useDashboardStore } from '../../stores/dashboardStore';
 import { Navbar, Footer } from '../../Acceuil';
 import { Link } from 'react-router-dom';
 import toast from 'react-hot-toast';
+import { uploadImage } from '../../lib/uploadUtils';
 
 // Map des icônes pour chaque formation
 const FORMATION_ICONS = {
@@ -100,49 +101,15 @@ export const InlineFormationEditor: React.FC<InlineFormationEditorProps> = ({
 
   // Fonction pour uploader une image
   const handleImageUpload = async (file: File, field: string) => {
-    // Vérifier le type de fichier
-    if (!file.type.startsWith('image/')) {
-      toast.error('Veuillez sélectionner une image valide');
-      return null;
-    }
+    const result = await uploadImage(file);
     
-    // Vérifier la taille (max 10MB)
-    if (file.size > 10 * 1024 * 1024) {
-      toast.error('L\'image est trop volumineuse (max 10MB)');
-      return null;
-    }
-    
-    const formData = new FormData();
-    formData.append('file', file);
-    
-    try {
-      const apiUrl = `${window.location.protocol}//${window.location.hostname}:4000/api/upload`;
-      console.log('Upload vers:', apiUrl);
-      
-      const res = await fetch(apiUrl, {
-        method: 'POST',
-        body: formData,
-      });
-      
-      console.log('Réponse serveur:', res.status);
-      
-      if (res.ok) {
-        const data = await res.json();
-        console.log('Données reçues:', data);
-        
-        const imageUrl = `/rachef-uploads/${data.filename}`;
-        updateField('datap', `${formationKey}.${field}`, imageUrl);
-        toast.success('Image uploadée avec succès');
-        return imageUrl;
-      } else {
-        const errorText = await res.text();
-        console.error('Erreur serveur:', res.status, errorText);
-        toast.error(`Erreur serveur: ${res.status} - ${errorText}`);
-        return null;
-      }
-    } catch (error) {
-      console.error('Erreur upload:', error);
-      toast.error(`Erreur de connexion: ${error.message}`);
+    if (result.success && result.filename) {
+      const imageUrl = `/rachef-uploads/${result.filename}`;
+      updateField('datap', `${formationKey}.${field}`, imageUrl);
+      toast.success('Image uploadée avec succès');
+      return imageUrl;
+    } else {
+      toast.error(`Erreur upload: ${result.error}`);
       return null;
     }
   };
